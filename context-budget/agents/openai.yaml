@@ -1,0 +1,4 @@
+interface:
+  display_name: "上下文预算审计"
+  short_description: "审计 Codex 上下文膨胀、重复内容与 Token 开销"
+  default_prompt: "使用 $context-budget 审计当前 Codex 配置，并给出收益最高且不牺牲质量的 Token 优化方案。"

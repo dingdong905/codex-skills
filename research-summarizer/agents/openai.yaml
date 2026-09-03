@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究资料总结器"
+  short_description: "总结论文与报告、比较多份资料并规范提取引用"
+  default_prompt: "使用 $research-summarizer 总结并比较这些资料，标明关键证据、分歧、局限和引用位置。"

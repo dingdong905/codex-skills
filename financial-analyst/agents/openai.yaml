@@ -1,0 +1,4 @@
+interface:
+  display_name: "财务分析师"
+  short_description: "执行财务比率、DCF、预算差异和滚动预测分析"
+  default_prompt: "使用 $financial-analyst 分析这些财务数据，先核对口径，再给出计算、假设、敏感性和结论。"

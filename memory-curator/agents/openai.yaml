@@ -1,0 +1,4 @@
+interface:
+  display_name: "记忆整理器"
+  short_description: "按来源、作用域和有效期整理可审计的持久记忆"
+  default_prompt: "使用 $memory-curator 判断哪些信息应该长期保留、存放在哪一层，以及怎样保持可复核。"

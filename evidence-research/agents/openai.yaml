@@ -1,0 +1,4 @@
+interface:
+  display_name: "证据型深度研究"
+  short_description: "以最新一手来源、反证核查和可复核证据完成深度研究"
+  default_prompt: "使用 $evidence-research 调查这个问题，优先采用最新一手来源，并给出紧凑、可复核的证据链。"
