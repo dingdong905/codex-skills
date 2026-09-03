@@ -7,6 +7,7 @@ param(
 $ErrorActionPreference = "Stop"
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $manifest = @(
+    "academic-search",
     "context-budget",
     "evidence-research",
     "financial-analyst",

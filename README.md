@@ -14,6 +14,7 @@
 
 | 技能 | 用途 | 示例调用 |
 | --- | --- | --- |
+| `academic-search` | 跨学科论文检索、证据核验与生活启示 | `使用 $academic-search 找睡眠改善的可靠研究` |
 | `evidence-research` | 当前、多来源、可审计的信息研究 | `使用 $evidence-research 调查……` |
 | `stock-analysis` | 上市公司基本面、估值和财务取证 | `使用 $stock-analysis 分析腾讯最新财报` |
 | `financial-analyst` | 财务比率、DCF、预算差异与预测 | `使用 $financial-analyst 建立 DCF` |

@@ -2,6 +2,14 @@
 
 本仓库对若干开源技能进行了中文本地化、Codex 适配或工作流重构。上游内容的版权归原作者所有。
 
+## ustc-ai4science/academic-search
+
+- 项目：https://github.com/ustc-ai4science/academic-search
+- 许可证：MIT
+- 相关技能：`academic-search`
+- 上游版本：`1.2.0`，适配基线提交 `3ae68445`
+- 改动：压缩 Codex 入口、替换 Claude/CDP 专属假设、强化撤稿与版本核验、跨学科证据评价，以及研究证据到生活判断的转化边界。
+
 ## affaan-m/ECC
 
 - 项目：https://github.com/affaan-m/ECC
