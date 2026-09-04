@@ -14,13 +14,39 @@
 
 | 技能 | 用途 | 示例调用 |
 | --- | --- | --- |
-| `academic-search` | 跨学科论文检索、证据核验与生活启示 | `使用 $academic-search 找睡眠改善的可靠研究` |
+| `academic-search` | 薄编排器：为模糊/跨学科问题选择专业 Skill | `使用 $academic-search 研究 AI 医疗的算法与临床证据` |
+| `ai-computing-research` | AI/计算机前沿、版本、benchmark 与复现审计 | `使用 $ai-computing-research 找近半年 LLM 推理研究` |
+| `biomedical-evidence` | 医学指南、综述、试验、绝对风险与安全边界 | `使用 $biomedical-evidence 评估改善睡眠的证据` |
+| `research-toolkit` | 共享检索、规范化、去重和标识符核验工具层 | `使用 $research-toolkit 核验这些 DOI 和 PMID` |
 | `evidence-research` | 当前、多来源、可审计的信息研究 | `使用 $evidence-research 调查……` |
 | `stock-analysis` | 上市公司基本面、估值和财务取证 | `使用 $stock-analysis 分析腾讯最新财报` |
 | `financial-analyst` | 财务比率、DCF、预算差异与预测 | `使用 $financial-analyst 建立 DCF` |
 | `research-summarizer` | 已提供论文、报告和网页的结构化摘要 | `使用 $research-summarizer 比较这些报告` |
 | `context-budget` | 审计上下文膨胀并减少 Token 消耗 | `使用 $context-budget 审计当前配置` |
 | `memory-curator` | 管理 Codex 记忆、项目约定和任务交接 | `使用 $memory-curator 整理长期记忆` |
+
+## 论文研究混合架构
+
+论文研究采用“专业 Skill + 统一工具层 + 薄编排器 + 评测体系”：
+
+    academic-search（只路由与跨域合并）
+    ├─ ai-computing-research
+    ├─ biomedical-evidence
+    └─ 后续领域 Skill
+
+    research-toolkit（共享 API、规范化、去重、标识符核验）
+    evals/research-stack（路由、引用、领域质量、安全与 Token 预算）
+
+明确的 AI/计算机或医学问题会直接使用专业 Skill，避免加载跨学科入口的全部规则。当前先用差异最大的两个领域验证架构；历史、地理、天文、社会学和哲学暂由 academic-search 明示“通用回退”，评测达标后再逐个加入。
+
+统一工具层只处理稳定的数据操作，专业 Skill 负责领域判断。这样可以独立替换数据源或上游项目，而不必复制 API、去重和核验逻辑。
+
+运行离线校验：
+
+    python -m unittest discover -s research-toolkit/tests -v
+    python evals/research-stack/score_eval.py lint
+
+完整设计与扩展门槛见 [docs/research-stack-architecture.md](docs/research-stack-architecture.md)。
 
 ## 安装
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究工具层"
+  short_description: "统一检索、规范化、去重与标识符核验"
+  default_prompt: "使用 $research-toolkit 检索或核验这些学术记录，并输出统一、可去重的证据数据。"

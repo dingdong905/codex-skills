@@ -8,10 +8,13 @@ $ErrorActionPreference = "Stop"
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $manifest = @(
     "academic-search",
+    "ai-computing-research",
+    "biomedical-evidence",
     "context-budget",
     "evidence-research",
     "financial-analyst",
     "memory-curator",
+    "research-toolkit",
     "research-summarizer",
     "stock-analysis"
 )

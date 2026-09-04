@@ -6,9 +6,24 @@
 
 - 项目：https://github.com/ustc-ai4science/academic-search
 - 许可证：MIT
-- 相关技能：`academic-search`
+- 相关技能：`academic-search`、`ai-computing-research`、`biomedical-evidence`
 - 上游版本：`1.2.0`，适配基线提交 `3ae68445`
 - 改动：压缩 Codex 入口、替换 Claude/CDP 专属假设、强化撤稿与版本核验、跨学科证据评价，以及研究证据到生活判断的转化边界。
+
+## google-deepmind/science-skills
+
+- 项目：https://github.com/google-deepmind/science-skills
+- 许可证：Apache-2.0
+- 相关技能：`biomedical-evidence`、`research-toolkit`
+- 参考模块：PubMed、ClinicalTrials.gov 与 Europe PMC 数据库技能
+- 改动：未复制其脚本；借鉴 grounding、限流、字段裁剪、试验注册和开放全文边界，使用 Python 标准库重新实现统一接口。
+
+## xwmxcz/papers-skill
+
+- 项目：https://github.com/xwmxcz/papers-skill
+- 许可证：MIT
+- 相关技能：`ai-computing-research`、`research-toolkit`
+- 改动：借鉴 Semantic Scholar/arXiv 的轻量 CLI 与先元数据后全文流程；未复制依赖型脚本，改为多数据源统一证据契约。
 
 ## affaan-m/ECC
 

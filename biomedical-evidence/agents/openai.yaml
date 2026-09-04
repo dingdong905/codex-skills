@@ -1,0 +1,4 @@
+interface:
+  display_name: "医学证据研究"
+  short_description: "查指南、综述与试验，分级收益风险"
+  default_prompt: "使用 $biomedical-evidence 检索并分级这个医学或健康问题的指南、综述和关键试验，说明绝对效果、局限与安全边界。"

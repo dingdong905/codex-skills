@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 与计算机论文研究"
+  short_description: "查前沿、验版本、审 benchmark 与复现性"
+  default_prompt: "使用 $ai-computing-research 检索并评估这个 AI/计算机主题的最新与关键论文，核验版本、实验公平性和复现状态。"
