@@ -1,0 +1,5 @@
+interface:
+  display_name: "研究汇报 PPT"
+  short_description: "把问题、方法、结果和局限组织成研究演示"
+  default_prompt: "使用 $research-presentation 将研究材料整理成有证据链、可答辩的学术汇报 PPT。"
+

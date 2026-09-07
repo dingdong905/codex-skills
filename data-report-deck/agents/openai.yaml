@@ -1,0 +1,5 @@
+interface:
+  display_name: "数据报告 PPT"
+  short_description: "把 KPI、趋势、驱动和行动组织成数据故事"
+  default_prompt: "使用 $data-report-deck 把分析结果做成指标口径清楚、结论先行的数据汇报 PPT。"
+

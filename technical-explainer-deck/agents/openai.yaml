@@ -1,0 +1,5 @@
+interface:
+  display_name: "技术讲解与选型 PPT"
+  short_description: "精细构建架构、机制、参数、场景和选型演示"
+  default_prompt: "使用 $technical-explainer-deck 把这份技术材料做成可投影、可核验、可编辑的体系讲解或选型 PPT。"
+

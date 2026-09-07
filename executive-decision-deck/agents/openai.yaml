@@ -1,0 +1,5 @@
+interface:
+  display_name: "管理决策 PPT"
+  short_description: "围绕审批、取舍和执行设计答案优先的演示"
+  default_prompt: "使用 $executive-decision-deck 把材料整理成一份管理层可以直接做决定的 PPT。"
+

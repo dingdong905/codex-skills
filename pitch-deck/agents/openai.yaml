@@ -1,0 +1,5 @@
+interface:
+  display_name: "融资路演 PPT"
+  short_description: "构建可核验的创业项目与融资故事"
+  default_prompt: "使用 $pitch-deck 把项目材料做成面向投资人的融资路演 PPT，不夸大未经验证的数据。"
+

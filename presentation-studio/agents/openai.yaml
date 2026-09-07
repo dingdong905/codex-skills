@@ -1,0 +1,5 @@
+interface:
+  display_name: "PPT 品类编排"
+  short_description: "先形成 brief，再路由到专业演示流程"
+  default_prompt: "使用 $presentation-studio 判断这份演示属于哪个品类，形成紧凑 brief 后调用最合适的专业 Skill。"
+

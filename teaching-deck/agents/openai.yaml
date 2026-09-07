@@ -1,0 +1,5 @@
+interface:
+  display_name: "教学课件"
+  short_description: "按学习目标、示例和练习设计课堂或工作坊 PPT"
+  default_prompt: "使用 $teaching-deck 把材料设计成有学习目标、示例、练习和复习节奏的课件。"
+

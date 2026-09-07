@@ -1,0 +1,5 @@
+interface:
+  display_name: "PPT 审阅与修复"
+  short_description: "检查内容、证据、叙事、视觉和可编辑性"
+  default_prompt: "使用 $deck-review 审阅这份 PPT，按 P0-P3 报告问题；如已授权修复，修复后重新渲染验证。"
+

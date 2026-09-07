@@ -7,6 +7,7 @@
 - 研究材料摘要、比较与信息整合
 - Codex 上下文治理与 Token 节省
 - 长期记忆整理、冲突处理与过期管理
+- 按演示目的细分的 PPT 研究、叙事、构建与质量评测
 
 技能调用名保持英文，正文和界面说明采用中文；必要的英文关键词会保留，以兼容中英文自动触发。
 
@@ -24,6 +25,37 @@
 | `research-summarizer` | 已提供论文、报告和网页的结构化摘要 | `使用 $research-summarizer 比较这些报告` |
 | `context-budget` | 审计上下文膨胀并减少 Token 消耗 | `使用 $context-budget 审计当前配置` |
 | `memory-curator` | 管理 Codex 记忆、项目约定和任务交接 | `使用 $memory-curator 整理长期记忆` |
+| `presentation-studio` | 薄编排器：形成 brief 并路由 PPT 品类 | `使用 $presentation-studio 规划这份汇报` |
+| `technical-explainer-deck` | 精细技术体系、架构、机制、参数和选型演示 | `使用 $technical-explainer-deck 做 AI Infra 技术培训` |
+| `executive-decision-deck` | 管理层审批、方案比较和资源决策 | `使用 $executive-decision-deck 做立项汇报` |
+| `research-presentation` | 论文、实验、组会与学术会议汇报 | `使用 $research-presentation 做论文汇报` |
+| `pitch-deck` | 创业项目和融资路演 | `使用 $pitch-deck 做种子轮 BP` |
+| `data-report-deck` | KPI、经营复盘和数据故事 | `使用 $data-report-deck 做季度复盘` |
+| `teaching-deck` | 课程、工作坊、示例和练习型课件 | `使用 $teaching-deck 做课堂课件` |
+| `deck-review` | PPT 内容、证据、视觉和可编辑性 QA | `使用 $deck-review 审阅并修复这份 PPT` |
+
+## PPT 混合架构
+
+PPT 能力采用“专业品类 Skill + 统一执行层 + 薄编排器 + 评测体系”：
+
+    presentation-studio（brief 与路由）
+    ├─ technical-explainer-deck（精细样板）
+    ├─ executive-decision-deck
+    ├─ research-presentation
+    ├─ pitch-deck
+    ├─ data-report-deck
+    └─ teaching-deck
+
+    Presentations（Codex 现有 PPTX 构建、模板、渲染）
+    deck-review（独立质量门）
+    evals/presentation-stack（路由、质量、硬失败与 Token 预算）
+
+先根据两份技术演示样例把“企业内部技术体系讲解、技术选型与培训”做精细，其余品类提供轻量但可用的基线。样例中的品牌、内部内容和原始 PPTX 不进入公开仓库。完整设计和开源取舍见 [docs/presentation-stack-architecture.md](docs/presentation-stack-architecture.md)。
+
+离线校验：
+
+    python evals/presentation-stack/score_eval.py lint
+    python deck-review/scripts/deck_audit.py example.pptx --mode live --json
 
 ## 论文研究混合架构
 
