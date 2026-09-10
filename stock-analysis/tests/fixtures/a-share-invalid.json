@@ -1,0 +1,37 @@
+{
+  "company": "示例股份",
+  "ticker": "600001",
+  "as_of": "2026-04-30",
+  "reporting_basis": "consolidated",
+  "currency": "CNY",
+  "units": "million",
+  "latest_reported_period": {
+    "period": "FY2025",
+    "published": "2026-04-18"
+  },
+  "market_profile": "CN-A",
+  "datapoints": [
+    {
+      "metric": "revenue",
+      "value": 100,
+      "period": "FY2025",
+      "basis": "consolidated",
+      "unit": "CNY million",
+      "source": "某行情聚合网站",
+      "source_tier": 4
+    }
+  ],
+  "a_share": {
+    "exchange": "UNKNOWN",
+    "board": "main",
+    "primary_sources": [],
+    "checks": {
+      "audit_opinion": {
+        "status": "checked"
+      },
+      "non_recurring_items": {
+        "status": "not_available"
+      }
+    }
+  }
+}

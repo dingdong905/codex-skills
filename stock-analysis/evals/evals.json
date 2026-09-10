@@ -127,6 +127,37 @@
         "Notes at least one verification concern that the aggregator figure hides (consolidated vs standalone, period/as-of, units, or definition of ROCE/debt)",
         "Any provisional read is explicitly caveated as resting on unverified aggregator data"
       ]
+    },
+    {
+      "id": 8,
+      "name": "a-share-disclosure-routing",
+      "prompt": "深度分析上交所一家制造业 A 股。行情网站说利润增长 30%，但我看到它收到过问询函，控股股东也有质押。请判断利润质量和估值是否站得住。",
+      "expected_output": "Routes to the A-share branch and the relevant industry playbook. It identifies the exact company and exchange, traces figures to SSE/CNINFO filings, runs the recency and consolidated-basis gates, reconciles attributable and adjusted attributable profit, checks the exchange inquiry and reply, pledge/freeze trend, related-party/fund-occupation disclosures, R&D capitalisation, audit opinion and major restructuring/goodwill. It runs the A-share intake gate before valuation and presents observable invalidation triggers without personalised trading advice.",
+      "files": [],
+      "assertions": [
+        "Explicitly uses the A-share disclosure branch and names SSE/CNINFO or the original exchange filings as sources of record",
+        "Treats aggregator figures as unverified until traced to the filing",
+        "Separates attributable net profit from adjusted attributable net profit and explains material non-recurring items",
+        "Checks the inquiry letter and company reply, rather than merely noting that an inquiry exists",
+        "Checks controlling-shareholder pledge/freeze, related-party or fund-occupation risk, audit opinion, and R&D capitalisation",
+        "Runs or calls for the A-share intake validation before relying on the valuation",
+        "Includes dated, observable thesis-invalidation triggers and no personalised buy/sell or position-sizing advice"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "a-share-ttm-and-ma-commitment",
+      "prompt": "某深交所公司上半年净利润翻倍，刚好处在收购标的业绩承诺最后一年。直接把半年利润乘二做全年估值合理吗？",
+      "expected_output": "Rejects simple annualisation. Reconstructs or requests a TTM using the latest full year plus current YTD minus prior-year YTD on a consistent basis, checks seasonality and consolidation changes, and treats the final performance-commitment year as a potential earnings-quality risk. It examines consideration, goodwill, promised versus realised profit, cash conversion, impairment testing and post-commitment evidence before assigning a valuation range.",
+      "files": [],
+      "assertions": [
+        "Rejects multiplying the half-year profit by two as a sufficient annual estimate",
+        "Uses or requests the FY plus current-YTD minus prior-YTD TTM bridge with aligned consolidation scope and units",
+        "Checks seasonality and whether the acquisition changed the consolidation perimeter",
+        "Examines consideration, goodwill, performance-commitment fulfilment, cash conversion and impairment testing",
+        "Treats the end of the commitment period as a falsifiable risk and asks for post-commitment evidence",
+        "Uses a valuation range or scenarios rather than a precise single target price"
+      ]
     }
   ]
 }

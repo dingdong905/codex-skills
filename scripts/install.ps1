@@ -14,6 +14,7 @@ $manifest = @(
     "evidence-research",
     "financial-analyst",
     "memory-curator",
+    "tech-mentor",
     "presentation-studio",
     "technical-explainer-deck",
     "executive-decision-deck",

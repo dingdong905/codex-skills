@@ -1,6 +1,6 @@
 ---
 name: stock-analysis
-description: "对上市公司进行严谨、行业相对、多因子的基本面分析与估值。适用于分析 stock/ticker/上市公司、比较同行、判断商业质量和估值，或检查 ROIC、ROCE、P/E、EV/EBITDA、free cash flow、银行/保险专用指标、利润真实性、审计意见、关联交易与治理风险；也支持 forensic accounting 和 IPO 模式。不用于个性化投资建议、仓位分配或交易信号。"
+description: "对上市公司进行行业相对、多因子的基本面分析与估值，包含 A 股披露、财务取证和证伪检查。适用于分析 stock/ticker/上市公司、比较同行、判断商业质量和估值，或检查利润真实性、审计、关联交易与治理风险；不用于个性化投资建议、仓位分配或交易信号。"
 license: MIT
 metadata:
   source: "alirezarezvani/claude-skills"
@@ -96,13 +96,21 @@ metadata:
 
 报告中写明：“纳入的最新期间：……；检查后续事件截至：……”。
 
-整理数据后运行：
+整理数据后运行通用数据门：
 
 ```bash
 python scripts/verify_data.py <intake.json>
 ```
 
 修复缺来源、跨源冲突、合并/单体混用、单位错误和数据过期等 error 级问题后再计算。细节见 `references/21-data-integrity-tools.md`。
+
+分析沪深北交易所 A 股时，额外读取 `references/22-a-share.md`，并以包含通用数据门的 A 股验证器替代上面的命令：
+
+```bash
+python scripts/verify_a_share.py <intake.json>
+```
+
+该分支要求显式记录交易所与板块、法定披露、审计意见、扣非口径、资金占用与关联交易、质押冻结、监管措施、研发资本化以及重大重组/商誉检查。非 A 股任务不要加载这份 reference。
 
 ### 阶段 2：行业与公司情形分类
 
@@ -208,6 +216,7 @@ python scripts/lint_report.py <report.md>
 - `scripts/score.py`：行业相对多因子评分，支持分部混合。
 - `scripts/valuation.py`：EV 桥、倍数、反向 DCF、两阶段 DCF 和情景估值。
 - `scripts/verify_data.py`：来源、口径、单位、跨源一致性和时效验证。
+- `scripts/verify_a_share.py`：先运行通用数据门，再检查 A 股专属披露与治理底稿是否齐全。
 - `scripts/lint_report.py`：报告完整性和数字引用检查。
 
 脚本只使用 Python 标准库。`scripts/benchmarks.json` 是可编辑的默认基准，不是永恒事实；有更合适的市场和期间数据时应覆盖。

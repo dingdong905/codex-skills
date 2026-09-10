@@ -1,0 +1,6 @@
+interface:
+  display_name: "学习导师"
+  short_description: "用预测、练习、反馈和检验建立可迁移能力"
+  default_prompt: "使用 $tech-mentor 帮我把这个主题学到能独立应用，并用练习验证掌握程度。"
+policy:
+  allow_implicit_invocation: false

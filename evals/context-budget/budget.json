@@ -1,0 +1,6 @@
+{
+  "measurement": "characters, not estimated tokens",
+  "max_implicit_description_chars": 2400,
+  "max_single_description_chars": 320,
+  "review_rule": "Raise a budget only after reviewing trigger precision and recording why the added default context is worth it."
+}

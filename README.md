@@ -11,6 +11,10 @@
 
 技能调用名保持英文，正文和界面说明采用中文；必要的英文关键词会保留，以兼容中英文自动触发。
 
+## 与 WorkBuddy 的双轨维护
+
+Codex 与 WorkBuddy 各自维护完整、原生兼容的一套 Skill，不通过软链接或运行时共享文件去重。成熟的工作流、参考资料、脚本思路和评测案例可以择优双向迁移，但元数据、工具名、权限模型、调用策略和验证命令必须按目标平台重新适配。详细约定见 [docs/cross-platform-maintenance.md](docs/cross-platform-maintenance.md)。
+
 ## 技能目录
 
 | 技能 | 用途 | 示例调用 |
@@ -20,11 +24,12 @@
 | `biomedical-evidence` | 医学指南、综述、试验、绝对风险与安全边界 | `使用 $biomedical-evidence 评估改善睡眠的证据` |
 | `research-toolkit` | 共享检索、规范化、去重和标识符核验工具层 | `使用 $research-toolkit 核验这些 DOI 和 PMID` |
 | `evidence-research` | 当前、多来源、可审计的信息研究 | `使用 $evidence-research 调查……` |
-| `stock-analysis` | 上市公司基本面、估值和财务取证 | `使用 $stock-analysis 分析腾讯最新财报` |
+| `stock-analysis` | 上市公司基本面、A 股披露、估值和财务取证 | `使用 $stock-analysis 分析腾讯最新财报` |
 | `financial-analyst` | 财务比率、DCF、预算差异与预测 | `使用 $financial-analyst 建立 DCF` |
 | `research-summarizer` | 已提供论文、报告和网页的结构化摘要 | `使用 $research-summarizer 比较这些报告` |
 | `context-budget` | 审计上下文膨胀并减少 Token 消耗 | `使用 $context-budget 审计当前配置` |
 | `memory-curator` | 管理 Codex 记忆、项目约定和任务交接 | `使用 $memory-curator 整理长期记忆` |
+| `tech-mentor` | 显式启动的系统学习、练习与掌握检验 | `使用 $tech-mentor 系统学习 MetalLB` |
 | `presentation-studio` | 薄编排器：形成 brief 并路由 PPT 品类 | `使用 $presentation-studio 规划这份汇报` |
 | `technical-explainer-deck` | 精细技术体系、架构、机制、参数和选型演示 | `使用 $technical-explainer-deck 做 AI Infra 技术培训` |
 | `executive-decision-deck` | 管理层审批、方案比较和资源决策 | `使用 $executive-decision-deck 做立项汇报` |
@@ -56,6 +61,26 @@ PPT 能力采用“专业品类 Skill + 统一执行层 + 薄编排器 + 评测�
 
     python evals/presentation-stack/score_eval.py lint
     python deck-review/scripts/deck_audit.py example.pptx --mode live --json
+
+## 学习导师
+
+`tech-mentor` 只接受显式调用，不会因普通“解释一下”自动注入上下文。它从 WorkBuddy 版本迁移了预测—尝试—反馈—检验、失败降级、间隔与交错练习等有效机制，同时按 Codex 的授权和持久化边界重新实现。
+
+离线校验：
+
+    python -m unittest discover -s tech-mentor/tests -v
+    python evals/tech-mentor/score_eval.py lint
+    python tech-mentor/scripts/validate_topic.py tech-mentor/references/topics/metallb.md
+
+## A 股研究分支
+
+`stock-analysis` 对沪深北 A 股按需加载专属披露规则，并在通用数据门之上检查审计、扣非、资金占用、质押冻结、监管措施、研发资本化和重组/商誉底稿。其他市场不会加载该 reference。
+
+离线校验：
+
+    python -m unittest discover -s stock-analysis/tests -v
+    python stock-analysis/evals/lint_evals.py
+    python stock-analysis/scripts/verify_a_share.py --template
 
 ## 论文研究混合架构
 
@@ -132,6 +157,8 @@ C:\Users\<你的用户名>\.codex\skills\<skill-name>
 - `references/SKILL.en.md` 保存英文入口备份，便于回滚及对照上游升级。
 - 上游专业 references 和脚本尽量保持原貌，中文调整优先集中在入口和用户界面元数据。
 - 新增或更新技能后，应运行官方 `quick_validate.py`，并对有关脚本做最小冒烟测试。
+- 跨平台迁移只复制经过选择的能力，不复制对方平台的 frontmatter、工具假设或持久化行为。
+- 上下文预算使用稳定字符数复测，不把中文字符数伪装成精确 Token：`python scripts/audit_context.py`。
 - 禁止提交 API Key、Token、Cookie、私钥、账号数据、公司机密或真实用户记忆。
 
 ## 来源与许可证

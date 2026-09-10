@@ -1,0 +1,99 @@
+{
+  "company": "华星制造股份有限公司",
+  "ticker": "SSE:600000",
+  "as_of": "2026-04-30",
+  "reporting_basis": "consolidated",
+  "currency": "CNY",
+  "units": "million",
+  "fiscal_year_end": "December",
+  "latest_reported_period": {
+    "period": "FY2025",
+    "published": "2026-04-18"
+  },
+  "market_profile": "CN-A",
+  "datapoints": [
+    {
+      "metric": "revenue",
+      "value": 8420,
+      "period": "FY2025",
+      "basis": "consolidated",
+      "unit": "CNY million",
+      "source": "巨潮资讯网 FY2025 年报，第 88 页",
+      "source_tier": 1
+    },
+    {
+      "metric": "net_profit",
+      "value": 612,
+      "period": "FY2025",
+      "basis": "consolidated",
+      "unit": "CNY million",
+      "source": "巨潮资讯网 FY2025 年报，第 89 页",
+      "source_tier": 1
+    },
+    {
+      "metric": "operating_cash_flow",
+      "value": 540,
+      "period": "FY2025",
+      "basis": "consolidated",
+      "unit": "CNY million",
+      "source": "巨潮资讯网 FY2025 年报，第 92 页",
+      "source_tier": 1
+    }
+  ],
+  "not_available": [],
+  "a_share": {
+    "exchange": "SSE",
+    "board": "main",
+    "primary_sources": [
+      {
+        "type": "annual_report",
+        "period": "FY2025",
+        "published": "2026-04-18",
+        "url": "https://www.sse.com.cn/disclosure/example-annual-report.pdf"
+      },
+      {
+        "type": "exchange_filings",
+        "period": "2026-01-01/2026-04-30",
+        "published": "2026-04-30",
+        "url": "https://www.sse.com.cn/disclosure/example-filings"
+      }
+    ],
+    "checks": {
+      "audit_opinion": {
+        "status": "checked",
+        "source": "巨潮资讯网 FY2025 年报审计报告",
+        "result": "标准无保留意见；关键审计事项已记录"
+      },
+      "non_recurring_items": {
+        "status": "checked",
+        "source": "巨潮资讯网 FY2025 年报非经常性损益表",
+        "result": "政府补助与处置损益已桥接至扣非归母净利润"
+      },
+      "related_party_and_fund_occupation": {
+        "status": "checked",
+        "source": "上交所 FY2025 年报关联交易与资金占用专项说明",
+        "result": "未发现非经营性资金占用；关联交易清单已复核"
+      },
+      "pledge_and_freeze": {
+        "status": "checked",
+        "source": "上交所 2026-04-30 股东股份质押公告检索",
+        "result": "控股股东无质押或冻结"
+      },
+      "regulatory_actions": {
+        "status": "checked",
+        "source": "上交所 2026-04-30 监管措施与问询函检索",
+        "result": "检查期内无未解决的重大监管事项"
+      },
+      "rd_capitalization": {
+        "status": "checked",
+        "source": "巨潮资讯网 FY2025 年报研发支出附注",
+        "result": "研发支出全部费用化"
+      },
+      "major_restructuring_and_goodwill": {
+        "status": "checked",
+        "source": "巨潮资讯网 FY2025 年报商誉与并购附注",
+        "result": "无重大资产重组；商誉余额与减值测试已记录"
+      }
+    }
+  }
+}

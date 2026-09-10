@@ -1,4 +1,4 @@
 interface:
   display_name: "上市公司基本面分析"
-  short_description: "基于原始公告进行行业相对分析、估值和财务取证"
-  default_prompt: "使用 $stock-analysis 分析这家公司，优先核验原始公告，检查盈利质量、治理、估值和证伪条件。"
+  short_description: "基于原始公告进行 A 股与全球公司的估值和财务取证"
+  default_prompt: "使用 $stock-analysis 分析这家公司，优先核验原始公告；若为 A 股，额外检查监管披露、扣非、质押和资金占用。"
