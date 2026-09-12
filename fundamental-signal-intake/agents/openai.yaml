@@ -1,0 +1,8 @@
+interface:
+  display_name: "基本面微观信号采集"
+  short_description: "为上市公司估值研究建立领先微观数据清单和可追溯事实账本"
+  default_prompt: "使用 $fundamental-signal-intake 为这家公司设计微观领先数据采集计划，并输出待拉数据与证据账本。"
+
+policy:
+  allow_implicit_invocation: true
+

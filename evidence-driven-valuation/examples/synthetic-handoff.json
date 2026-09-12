@@ -1,0 +1,855 @@
+{
+  "schema_version": 2,
+  "as_of": "2026-01-02T12:00:00Z",
+  "currency": "CNY",
+  "amount_unit": "ones",
+  "analysis_mode": "independent",
+  "scope_basis": "One synthetic operation; no subsidiaries, off-balance sheet interests or omitted businesses",
+  "ledger": {
+    "as_of": "2026-01-02T12:00:00Z",
+    "records": [
+      {
+        "record_id": "quantity",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "quantity",
+        "driver": "quantity",
+        "value": 10,
+        "unit": "units",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://quantity",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://quantity",
+        "source_excerpt": "Synthetic quantity = 10 units",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "price",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "price",
+        "driver": "price",
+        "value": 3,
+        "unit": "CNY/unit",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://price",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://price",
+        "source_excerpt": "Synthetic price = 3 CNY/unit",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "cost",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "cost",
+        "driver": "cost",
+        "value": 10,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://cost",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://cost",
+        "source_excerpt": "Synthetic cost = 10 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "working_capital",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "working_capital",
+        "driver": "working_capital",
+        "value": 5,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://working_capital",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://working_capital",
+        "source_excerpt": "Synthetic working_capital = 5 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "capex",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "capex",
+        "driver": "capex",
+        "value": 5,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://capex",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://capex",
+        "source_excerpt": "Synthetic capex = 5 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "discount_rate",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "discount_rate",
+        "driver": "discount_rate",
+        "value": 0.1,
+        "unit": "ratio",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://discount_rate",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://discount_rate",
+        "source_excerpt": "Synthetic discount_rate = 0.1 ratio",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "terminal_growth",
+        "entity": "Synthetic Issuer",
+        "business_line": "core",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "terminal_growth",
+        "driver": "terminal_growth",
+        "value": 0,
+        "unit": "ratio",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://terminal_growth",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://terminal_growth",
+        "source_excerpt": "Synthetic terminal_growth = 0 ratio",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_cash",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "cash",
+        "driver": "cash",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_cash",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_cash",
+        "source_excerpt": "Synthetic cash = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_debt",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "debt",
+        "driver": "debt",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_debt",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_debt",
+        "source_excerpt": "Synthetic debt = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_lease_liabilities",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "lease_liabilities",
+        "driver": "lease_liabilities",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_lease_liabilities",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_lease_liabilities",
+        "source_excerpt": "Synthetic lease_liabilities = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_minority_interest",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "minority_interest",
+        "driver": "minority_interest",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_minority_interest",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_minority_interest",
+        "source_excerpt": "Synthetic minority_interest = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_non_operating_assets",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "non_operating_assets",
+        "driver": "non_operating_assets",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_non_operating_assets",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_non_operating_assets",
+        "source_excerpt": "Synthetic non_operating_assets = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_contingent_liabilities",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "contingent_liabilities",
+        "driver": "contingent_liabilities",
+        "value": 0,
+        "unit": "CNY:ones",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_contingent_liabilities",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_contingent_liabilities",
+        "source_excerpt": "Synthetic contingent_liabilities = 0 CNY:ones",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "bridge_diluted_shares",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "diluted_shares",
+        "driver": "diluted_shares",
+        "value": 10,
+        "unit": "shares",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://bridge_diluted_shares",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://bridge_diluted_shares",
+        "source_excerpt": "Synthetic diluted_shares = 10 shares",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      },
+      {
+        "record_id": "scenario_probability",
+        "entity": "Synthetic Issuer",
+        "business_line": "__group__",
+        "supply_chain_stage": "accepted_delivery",
+        "metric": "probability",
+        "driver": "probability",
+        "value": 1,
+        "unit": "ratio",
+        "geography": "CN",
+        "product_or_project": "fixture",
+        "counterparty": "synthetic customer",
+        "observed_at": "2026-01-02T09:00:00Z",
+        "published_at": "2026-01-02T09:00:00Z",
+        "available_at": "2026-01-02T09:00:00Z",
+        "vintage_at": "2026-01-02T09:00:00Z",
+        "vintage_id": "v1",
+        "snapshot_reference": "fixture://scenario_probability",
+        "collected_at": "2026-01-02T12:00:00Z",
+        "source_title": "Synthetic evidence",
+        "source_publisher": "Fixture publisher",
+        "source_group": "original-A",
+        "source_url_or_file": "fixture://scenario_probability",
+        "source_excerpt": "Synthetic probability = 1 ratio",
+        "evidence_class": "primary_confirmation",
+        "confidence": "high",
+        "cross_checks": [],
+        "status": "confirmed",
+        "notes": "Synthetic test only, no investment use.",
+        "coverage": 1,
+        "scope": "CN/product",
+        "source_kind": "fundamental"
+      }
+    ]
+  },
+  "nodes": {
+    "revenue": {
+      "kind": "calculation",
+      "op": "multiply",
+      "args": [
+        "quantity",
+        "price"
+      ],
+      "evidence_refs": [
+        "quantity",
+        "price"
+      ],
+      "unit": "CNY:ones",
+      "business_line": "core",
+      "driver": "revenue",
+      "rationale": "Deterministic operating bridge; cost includes cash tax.",
+      "available_at": "2026-01-02T09:00:00Z",
+      "unit_derivation": "units * CNY/unit = CNY; subtract CNY amounts"
+    },
+    "operating_cash": {
+      "kind": "calculation",
+      "op": "subtract",
+      "args": [
+        "revenue",
+        "cost"
+      ],
+      "evidence_refs": [
+        "revenue",
+        "cost"
+      ],
+      "unit": "CNY:ones",
+      "business_line": "core",
+      "driver": "operating_cash",
+      "rationale": "Deterministic operating bridge; cost includes cash tax.",
+      "available_at": "2026-01-02T09:00:00Z",
+      "unit_derivation": "units * CNY/unit = CNY; subtract CNY amounts"
+    },
+    "after_wc": {
+      "kind": "calculation",
+      "op": "subtract",
+      "args": [
+        "operating_cash",
+        "working_capital"
+      ],
+      "evidence_refs": [
+        "operating_cash",
+        "working_capital"
+      ],
+      "unit": "CNY:ones",
+      "business_line": "core",
+      "driver": "after_wc",
+      "rationale": "Deterministic operating bridge; cost includes cash tax.",
+      "available_at": "2026-01-02T09:00:00Z",
+      "unit_derivation": "units * CNY/unit = CNY; subtract CNY amounts"
+    },
+    "fcff": {
+      "kind": "calculation",
+      "op": "subtract",
+      "args": [
+        "after_wc",
+        "capex"
+      ],
+      "evidence_refs": [
+        "after_wc",
+        "capex"
+      ],
+      "unit": "CNY:ones",
+      "business_line": "core",
+      "driver": "cash_flow",
+      "rationale": "Deterministic operating bridge; cost includes cash tax.",
+      "available_at": "2026-01-02T09:00:00Z",
+      "unit_derivation": "units * CNY/unit = CNY; subtract CNY amounts"
+    },
+    "forecast": {
+      "kind": "assumption",
+      "value": 10,
+      "bounds": [
+        10,
+        10
+      ],
+      "bounds_basis": "Fixture assumes unchanged accepted sales and cash costs for next year",
+      "bounded_by_evidence": true,
+      "evidence_refs": [
+        "fcff"
+      ],
+      "unit": "CNY:ones",
+      "business_line": "core",
+      "driver": "cash_flow",
+      "rationale": "Explicit flat forecast for test",
+      "available_at": "2026-01-02T09:00:00Z"
+    }
+  },
+  "research_plan": {
+    "defined_at": "2026-01-02T09:00:00Z",
+    "materiality_threshold": 0.05,
+    "materiality_basis": "5% of normalized operating activity, explicit test threshold",
+    "businesses": [
+      {
+        "name": "core",
+        "weight": 1,
+        "weight_basis": "All operating activity",
+        "industry": "nonfinancial",
+        "method": "dcf",
+        "routing_basis": "Nonfinancial cash-generating business",
+        "economic_ids": [
+          "core-business"
+        ],
+        "drivers": [
+          "capex",
+          "cash_flow",
+          "cost",
+          "discount_rate",
+          "price",
+          "quantity",
+          "terminal_growth",
+          "working_capital"
+        ]
+      }
+    ],
+    "rules": {
+      "core/capex": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/cash_flow": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/cost": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/discount_rate": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/price": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/quantity": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/terminal_growth": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      },
+      "core/working_capital": {
+        "min_independent": 1,
+        "min_primary": 1,
+        "max_age_hours": 24,
+        "min_coverage": 0.9,
+        "rationale": "Synthetic full-coverage inputs; real designs require independent judgment"
+      }
+    }
+  },
+  "evidence_gate": {
+    "status": "pass",
+    "as_of": "2026-01-02T12:00:00Z",
+    "critical_missing": [],
+    "material_conflicts": [],
+    "drivers": [
+      {
+        "name": "capex",
+        "business_line": "core",
+        "record_ids": [
+          "capex"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "capex",
+          "capex"
+        ],
+        "causal_ref": "capex"
+      },
+      {
+        "name": "cash_flow",
+        "business_line": "core",
+        "record_ids": [
+          "quantity",
+          "price",
+          "cost",
+          "working_capital",
+          "capex"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "forecast",
+          "forecast"
+        ],
+        "causal_ref": "forecast"
+      },
+      {
+        "name": "cost",
+        "business_line": "core",
+        "record_ids": [
+          "cost"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "cost",
+          "cost"
+        ],
+        "causal_ref": "cost"
+      },
+      {
+        "name": "discount_rate",
+        "business_line": "core",
+        "record_ids": [
+          "discount_rate"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "discount_rate",
+          "discount_rate"
+        ],
+        "causal_ref": "discount_rate"
+      },
+      {
+        "name": "price",
+        "business_line": "core",
+        "record_ids": [
+          "price"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "price",
+          "price"
+        ],
+        "causal_ref": "price"
+      },
+      {
+        "name": "quantity",
+        "business_line": "core",
+        "record_ids": [
+          "quantity"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "quantity",
+          "quantity"
+        ],
+        "causal_ref": "quantity"
+      },
+      {
+        "name": "terminal_growth",
+        "business_line": "core",
+        "record_ids": [
+          "terminal_growth"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "terminal_growth",
+          "terminal_growth"
+        ],
+        "causal_ref": "terminal_growth"
+      },
+      {
+        "name": "working_capital",
+        "business_line": "core",
+        "record_ids": [
+          "working_capital"
+        ],
+        "scope": "CN/product",
+        "bounds_refs": [
+          "working_capital",
+          "working_capital"
+        ],
+        "causal_ref": "working_capital"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "base",
+      "probability": 1,
+      "probability_ref": "scenario_probability",
+      "segments": [
+        {
+          "name": "core",
+          "method": "dcf",
+          "basis": "enterprise",
+          "inputs": {
+            "explicit_fcff": [
+              10
+            ],
+            "discount_rate": 0.1,
+            "terminal_growth": 0
+          },
+          "provenance": {
+            "explicit_fcff.0": "forecast",
+            "discount_rate": "discount_rate",
+            "terminal_growth": "terminal_growth"
+          }
+        }
+      ],
+      "equity_bridge": {
+        "cash": 0,
+        "debt": 0,
+        "lease_liabilities": 0,
+        "minority_interest": 0,
+        "non_operating_assets": 0,
+        "contingent_liabilities": 0,
+        "diluted_shares": 10
+      },
+      "bridge_provenance": {
+        "cash": "bridge_cash",
+        "debt": "bridge_debt",
+        "lease_liabilities": "bridge_lease_liabilities",
+        "minority_interest": "bridge_minority_interest",
+        "non_operating_assets": "bridge_non_operating_assets",
+        "contingent_liabilities": "bridge_contingent_liabilities",
+        "diluted_shares": "bridge_diluted_shares"
+      },
+      "bridge_allocations": {
+        "cash": [],
+        "debt": [],
+        "lease_liabilities": [],
+        "minority_interest": [],
+        "non_operating_assets": [],
+        "contingent_liabilities": []
+      }
+    }
+  ]
+}
+

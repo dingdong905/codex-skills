@@ -1,0 +1,5 @@
+interface:
+  display_name: "证据驱动估值"
+  short_description: "用可追溯证据驱动分业务估值、反向估值和特殊情形建模"
+  default_prompt: "使用 $evidence-driven-valuation 读取已验证事实账本，执行证据闸门、行业路由和独立估值。"
+
