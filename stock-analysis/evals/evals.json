@@ -158,6 +158,49 @@
         "Treats the end of the commitment period as a falsifiable risk and asks for post-commitment evidence",
         "Uses a valuation range or scenarios rather than a precise single target price"
       ]
+    },
+    {
+      "id": 10,
+      "name": "leading-signals-before-financials",
+      "prompt": "分析一家制造企业：最近审计年报利润不错，但近两个月订单、实际成交价、库存位置和客户验收可能已经变化。请判断基本面和价值。",
+      "expected_output": "Before extrapolating the annual report, builds a point-in-time micro-evidence ledger through fundamental-signal-intake, maps each fact to the relevant business and operating driver, then uses evidence-driven-valuation for an independent evidence-gated value. It later reconciles those leading signals to the audited period, treating the annual report as reliable for its historical accounting period but not as proof of current operations.",
+      "files": [],
+      "assertions": [
+        "Uses or explicitly calls for fundamental-signal-intake before financial-ratio extrapolation",
+        "Checks orders-to-delivery, realised price, inventory location and customer acceptance rather than treating the annual report as current demand",
+        "Maps evidence to named businesses and quantity/price/cost/working-capital/capex/cash-flow drivers",
+        "Uses or explicitly calls for evidence-driven-valuation before market-price calibration",
+        "Uses the annual report as a dated accounting reconciliation and records lag/scope/conflict instead of silently overriding newer evidence",
+        "Does not treat framework orders, channel shipment or planned capacity as realised revenue/demand/capacity"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "freshness-is-not-reliability",
+      "prompt": "社交媒体今天说工厂满产，上一份季报说利用率只有 65%。既然今天的信息更新，是不是直接用满产做估值？",
+      "expected_output": "Separates freshness from reliability. Treats the social post as a lead, seeks point-in-time primary or physical corroboration and coverage, preserves the 65% filing metric for its own period, and does not promote the new claim into effective capacity until the evidence gate and causal conversion pass.",
+      "files": [],
+      "assertions": [
+        "Explicitly states that newer does not automatically mean more reliable",
+        "Treats the social post as an unverified lead and asks for primary/physical corroboration, scope and time",
+        "Does not discard the quarterly utilisation figure; limits it to its reporting period and definition",
+        "Does not use full capacity as an independent valuation input before evidence-backed conversion",
+        "Explains how later financial or operating disclosures would validate or contradict the leading signal"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "financial-reconciliation-conflict-loop",
+      "prompt": "微观交付数据推算收入增长 25%，但随后披露的财报收入只增长 8%。继续沿用原估值，还是直接用财报覆盖？",
+      "expected_output": "Does neither mechanically. Reconciles timing, consolidation scope, gross/net recognition, prices, returns, channel inventory, acceptance and FX; preserves the conflict in the ledger; then either rebuilds the causal nodes and valuation or fails the evidence gate/uses a conditional range if the gap remains unresolved.",
+      "files": [],
+      "assertions": [
+        "Does not keep the old valuation unchanged and does not silently overwrite the micro evidence with the financial statement",
+        "Checks timing and consolidation/business scope before comparing 25% with 8%",
+        "Checks at least two conversion explanations such as price/mix, returns, channel inventory, acceptance, gross-vs-net or FX",
+        "Records the unresolved difference as a material conflict",
+        "Re-runs the evidence conversion and valuation when inputs change, or fails the gate / labels the result conditional"
+      ]
     }
   ]
 }

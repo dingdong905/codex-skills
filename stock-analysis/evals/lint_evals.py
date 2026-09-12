@@ -35,7 +35,11 @@ def lint() -> list[str]:
         for relative in case.get("files", []):
             if not (HERE / relative).is_file():
                 errors.append(f"{label}: missing fixture {relative}")
-    required = {"a-share-disclosure-routing", "a-share-ttm-and-ma-commitment"}
+    required = {
+        "a-share-disclosure-routing", "a-share-ttm-and-ma-commitment",
+        "leading-signals-before-financials", "freshness-is-not-reliability",
+        "financial-reconciliation-conflict-loop",
+    }
     missing = required - names
     if missing:
         errors.append(f"missing A-share regression cases: {', '.join(sorted(missing))}")
