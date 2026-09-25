@@ -1,0 +1,4 @@
+interface:
+  display_name: "飞书文档输出"
+  short_description: "把中文成稿整理成自然、可执行的飞书 Markdown 文档"
+  default_prompt: "使用 $feishu-document-output 把这份内容整理成适合飞书的最终文档，并选择正确的文体模板。"
