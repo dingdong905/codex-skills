@@ -1,0 +1,4 @@
+interface:
+  display_name: "页面视觉与结构审查"
+  short_description: "审查页面层级、结构和交互，按实际证据重设计或分析参考页面规律"
+  default_prompt: "使用 $hallmark 完成当前界面或素材任务，并遵循项目已有约束。"

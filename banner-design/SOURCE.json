@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "banner-design",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "claudekit (upstream metadata)",
+  "adaptations": [
+    "Rewritten for builtin imagegen and editable composition",
+    "Removed Gemini, Claude paths and missing skills",
+    "Updated platform-size caveats and removed outdated 20-percent text rule",
+    "Added read-only PNG container/dimension/size validator"
+  ],
+  "licenseStatus": "MIT declaration in upstream SKILL.md; no standalone license supplied",
+  "redistributionNote": "Collection grants no blanket license. Retain supplied terms and resolve unclear/conflicting component licensing before public redistribution."
+}

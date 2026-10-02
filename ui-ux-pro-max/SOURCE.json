@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "ui-ux-pro-max",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "upstream ui-ux-pro-max snapshot; original authorship not independently established",
+  "licenseStatus": "not specified for this component in supplied snapshot",
+  "redistributionNote": "Retain third-party notices and dataset-specific terms; collection README grants no blanket license. Component licensing requires review before public redistribution.",
+  "adaptations": [
+    "Chinese concise Codex entrypoint; long guidance moved to optional reference",
+    "Preserved local datasets and stdlib search engine",
+    "Removed missing SwiftUI from stack configuration and updated counts",
+    "Excluded catalog-refresh and relevance-evaluator tests whose helper scripts are absent from upstream snapshot"
+  ]
+}

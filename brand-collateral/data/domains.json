@@ -1,0 +1,94 @@
+{
+  "deliverable": {
+    "file": "deliverables.csv",
+    "search_cols": [
+      "Deliverable",
+      "Category",
+      "Keywords",
+      "Description",
+      "Mockup Context"
+    ],
+    "output_cols": [
+      "Deliverable",
+      "Category",
+      "Keywords",
+      "Description",
+      "Dimensions",
+      "File Format",
+      "Logo Placement",
+      "Color Usage",
+      "Typography Notes",
+      "Mockup Context",
+      "Best Practices",
+      "Avoid"
+    ]
+  },
+  "style": {
+    "file": "styles.csv",
+    "search_cols": [
+      "Style Name",
+      "Category",
+      "Keywords",
+      "Description",
+      "Mood"
+    ],
+    "output_cols": [
+      "Style Name",
+      "Category",
+      "Keywords",
+      "Description",
+      "Primary Colors",
+      "Secondary Colors",
+      "Typography",
+      "Materials",
+      "Finishes",
+      "Mood",
+      "Best For",
+      "Avoid For"
+    ]
+  },
+  "industry": {
+    "file": "industries.csv",
+    "search_cols": [
+      "Industry",
+      "Keywords",
+      "CIP Style",
+      "Mood"
+    ],
+    "output_cols": [
+      "Industry",
+      "Keywords",
+      "CIP Style",
+      "Primary Colors",
+      "Secondary Colors",
+      "Typography",
+      "Key Deliverables",
+      "Mood",
+      "Best Practices",
+      "Avoid"
+    ]
+  },
+  "mockup": {
+    "file": "mockup-contexts.csv",
+    "search_cols": [
+      "Context Name",
+      "Category",
+      "Keywords",
+      "Scene Description"
+    ],
+    "output_cols": [
+      "Context Name",
+      "Category",
+      "Keywords",
+      "Scene Description",
+      "Lighting",
+      "Environment",
+      "Props",
+      "Camera Angle",
+      "Background",
+      "Style Notes",
+      "Best For",
+      "Prompt Modifiers"
+    ]
+  }
+}

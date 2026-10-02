@@ -25,7 +25,16 @@ $manifest = @(
     "deck-review",
     "research-toolkit",
     "research-summarizer",
-    "stock-analysis"
+    "stock-analysis",
+    "ui-ux-pro-max",
+    "brand",
+    "design-system",
+    "hallmark",
+    "banner-design",
+    "ui-styling",
+    "logo-design",
+    "brand-collateral",
+    "find-skills"
 )
 
 $selectedSkills = if ($Skills -and $Skills.Count -gt 0) { $Skills } else { $manifest }

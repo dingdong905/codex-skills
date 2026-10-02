@@ -1,0 +1,15 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "design-system",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "claudekit (upstream metadata)",
+  "licenseStatus": "MIT (upstream SKILL.md declaration; no standalone license supplied)",
+  "redistributionNote": "Retain third-party notices and dataset-specific terms; collection README grants no blanket license. Component licensing requires review before public redistribution.",
+  "adaptations": [
+    "Token-only scope; excluded all slides data and helpers",
+    "Alias-preserving CSS including nested dark boundaries",
+    "Validate missing references, cycles, naming collisions and unsupported values"
+  ]
+}

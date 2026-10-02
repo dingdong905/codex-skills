@@ -1,0 +1,4 @@
+interface:
+  display_name: "品牌物料与展示稿"
+  short_description: "复用现有品牌制作名片、信纸与包装，区分展示效果、可编辑源和生产文件"
+  default_prompt: "使用 $brand-collateral 完成当前品牌设计任务，保留已有品牌事实和格式要求。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "技能发现与评估"
+  short_description: "搜索并比较外部技能，核验来源与许可，按仓库流程完成适配和验证"
+  default_prompt: "使用 $find-skills 为当前能力缺口寻找并评估可接入 Codex 的技能。"

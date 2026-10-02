@@ -1,0 +1,4 @@
+interface:
+  display_name: "React 界面实现"
+  short_description: "沿用现有 React、shadcn 和 Tailwind 项目，实现样式、主题与状态"
+  default_prompt: "使用 $ui-styling 完成当前界面或素材任务，并遵循项目已有约束。"

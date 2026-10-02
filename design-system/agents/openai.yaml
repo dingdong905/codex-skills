@@ -1,0 +1,4 @@
+interface:
+  display_name: "设计 Token"
+  short_description: "建立三层设计 Token、组件状态与主题映射，生成并校验 CSS 变量"
+  default_prompt: "使用 $design-system 完成当前任务，并遵循项目已有规范。"

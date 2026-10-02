@@ -1,0 +1,18 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "selectedResources": [
+    "slides/references/copywriting-formulas.md",
+    "slides/references/slide-strategies.md",
+    "slides/references/layout-patterns.md"
+  ],
+  "adaptedReference": "persuasion-and-layout.md",
+  "importedAt": "2026-10-02",
+  "adaptations": [
+    "Select narrative/layout ideas for existing specialist skill",
+    "Keep Presentations/deck-review execution and evidence contracts",
+    "Exclude HTML/CDN/Chart.js implementations, fixed emotion arcs and fabricated social proof"
+  ],
+  "licenseStatus": "slides component has no explicit license declaration in supplied snapshot; design-system entry declares MIT; collection grants no blanket license",
+  "redistributionNote": "Record source-specific terms; clarify slides licensing before public redistribution."
+}

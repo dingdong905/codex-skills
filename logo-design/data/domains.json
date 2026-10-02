@@ -1,0 +1,67 @@
+{
+  "style": {
+    "file": "styles.csv",
+    "search_cols": [
+      "Style Name",
+      "Category",
+      "Keywords",
+      "Best For"
+    ],
+    "output_cols": [
+      "Style Name",
+      "Category",
+      "Keywords",
+      "Primary Colors",
+      "Secondary Colors",
+      "Typography",
+      "Effects",
+      "Best For",
+      "Avoid For",
+      "Complexity",
+      "Era"
+    ]
+  },
+  "color": {
+    "file": "colors.csv",
+    "search_cols": [
+      "Palette Name",
+      "Category",
+      "Keywords",
+      "Psychology",
+      "Best For"
+    ],
+    "output_cols": [
+      "Palette Name",
+      "Category",
+      "Keywords",
+      "Primary Hex",
+      "Secondary Hex",
+      "Accent Hex",
+      "Background Hex",
+      "Text Hex",
+      "Psychology",
+      "Best For",
+      "Avoid For"
+    ]
+  },
+  "industry": {
+    "file": "industries.csv",
+    "search_cols": [
+      "Industry",
+      "Keywords",
+      "Recommended Styles",
+      "Mood"
+    ],
+    "output_cols": [
+      "Industry",
+      "Keywords",
+      "Recommended Styles",
+      "Primary Colors",
+      "Typography",
+      "Common Symbols",
+      "Mood",
+      "Best Practices",
+      "Avoid"
+    ]
+  }
+}

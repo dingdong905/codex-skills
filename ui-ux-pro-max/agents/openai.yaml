@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI / UX 设计检索"
+  short_description: "检索本地配色、字体、布局与交互资料，支持界面设计、实现和质量审查"
+  default_prompt: "使用 $ui-ux-pro-max 完成当前任务，并遵循项目已有规范。"

@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "ui-styling",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "claudekit (upstream metadata)",
+  "adaptations": [
+    "Scoped to existing React/shadcn/Tailwind projects",
+    "Separated Tailwind v3 and v4 with non-cyclic token mappings",
+    "Removed canvas/poster content and unnecessary CLI wrappers",
+    "Preserved supplied Apache license and recorded upstream MIT conflict"
+  ],
+  "licenseStatus": "upstream SKILL.md says MIT; supplied LICENSE.txt is Apache-2.0; discrepancy unresolved, preserve file without claiming a resolution",
+  "redistributionNote": "Collection grants no blanket license. Retain supplied terms and resolve unclear/conflicting component licensing before public redistribution."
+}

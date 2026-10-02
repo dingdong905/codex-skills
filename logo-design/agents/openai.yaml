@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logo 设计与评审"
+  short_description: "形成 Logo 简报、检索风格候选并区分位图概念与真实可编辑矢量交付"
+  default_prompt: "使用 $logo-design 完成当前品牌设计任务，保留已有品牌事实和格式要求。"

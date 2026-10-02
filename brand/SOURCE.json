@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "brand",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "claudekit (upstream metadata)",
+  "licenseStatus": "not specified for this component in supplied snapshot",
+  "redistributionNote": "Retain third-party notices and dataset-specific terms; collection README grants no blanket license. Component licensing requires review before public redistribution.",
+  "adaptations": [
+    "Chinese Codex entrypoint and portable paths",
+    "Preserve project brand name, status semantics and existing primitives",
+    "Sync only explicitly provided color values, validate CSS before writing",
+    "Replace Claude-only tooling references"
+  ]
+}

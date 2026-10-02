@@ -21,3 +21,5 @@ metadata:
 
 交付前使用 `deck-review`，重点检查可证实性、指标口径、视觉可信度和问答风险。
 
+
+需要组织问题、价值、证明与融资页面时，按需读取 [叙事与布局参考](references/persuasion-and-layout.md)，继续使用现有构建与验证流程。

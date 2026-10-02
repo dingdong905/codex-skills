@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "collectionParent": "https://github.com/Stramony/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "hallmark",
+  "importedAt": "2026-10-02",
+  "upstreamAttribution": "Hallmark upstream snapshot; original authorship not independently established",
+  "adaptations": [
+    "Rewritten concise Chinese audit/redesign/study workflows",
+    "Extracted structural criteria and evidence requirements",
+    "Replaced WebFetch/Chrome-specific assumptions with current browser capabilities",
+    "Removed forced theme bans, automatic logs and self-score stamps"
+  ],
+  "licenseStatus": "not specified for this component in supplied snapshot",
+  "redistributionNote": "Collection grants no blanket license. Retain supplied terms and resolve unclear/conflicting component licensing before public redistribution."
+}

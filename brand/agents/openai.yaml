@@ -1,0 +1,4 @@
+interface:
+  display_name: "品牌规范"
+  short_description: "定义品牌语气、视觉规范与资产要求，保留已有品牌事实和项目约束"
+  default_prompt: "使用 $brand 完成当前任务，并遵循项目已有规范。"

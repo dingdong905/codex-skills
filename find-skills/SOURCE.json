@@ -1,0 +1,17 @@
+{
+  "sourceRepository": "https://github.com/vercel-labs/skills",
+  "sourceCommit": "3694740352eeef5cdd689af694c485f1ff62eec3",
+  "sourcePath": "skills/find-skills/SKILL.md",
+  "upstreamAttribution": "Vercel, Inc.",
+  "importedAt": "2026-10-02",
+  "licenseStatus": "MIT; upstream LICENSE retained as LICENSE.txt",
+  "sourceContentSha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+  "adaptations": [
+    "Narrow discovery triggers; check existing skills first",
+    "Compare source, license, overlap and context costs instead of popularity thresholds",
+    "Reuse available tools; optional pinned CLI with telemetry disabled",
+    "Distinguish search failure from zero matches",
+    "Repository-first integration and isolated packaging checks"
+  ],
+  "cliImported": false
+}

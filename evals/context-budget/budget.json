@@ -1,6 +1,53 @@
 {
   "measurement": "characters, not estimated tokens",
-  "max_implicit_description_chars": 2400,
+  "max_implicit_description_chars": 3100,
   "max_single_description_chars": 320,
-  "review_rule": "Raise a budget only after reviewing trigger precision and recording why the added default context is worth it."
+  "review_rule": "Raise a budget only after reviewing trigger precision and recording why the added default context is worth it.",
+  "reviewed_additions": [
+    {
+      "date": "2026-10-02",
+      "skills": [
+        "ui-ux-pro-max",
+        "brand",
+        "design-system"
+      ],
+      "before_batch_implicit_description_chars": 2609,
+      "added_description_chars": 242,
+      "after_batch_implicit_description_chars": 2851,
+      "reason": "Retain default discovery for three complementary design capabilities. UI search excludes backend work; brand focuses on brand-guideline tasks; design-system is limited to tokens and component specs, excluding presentations. Existing baseline already exceeded the old 2400-character ceiling; 3000 accommodates this batch with 149 characters of headroom. No unrelated skill descriptions or invocation policies changed."
+    },
+    {
+      "date": "2026-10-02",
+      "skills": [
+        "hallmark",
+        "banner-design",
+        "ui-styling"
+      ],
+      "before_batch_implicit_description_chars": 2851,
+      "added_description_chars": 121,
+      "after_batch_implicit_description_chars": 2972,
+      "reason": "Keep the 3000-character ceiling unchanged: shorten second-batch discovery descriptions; mode-specific detail stays in references. Three skills cover page critique, campaign assets and stack-specific implementation."
+    },
+    {
+      "date": "2026-10-02",
+      "skills": [
+        "logo-design",
+        "brand-collateral"
+      ],
+      "before_batch_implicit_description_chars": 2972,
+      "added_description_chars": 55,
+      "after_batch_implicit_description_chars": 3027,
+      "reason": "Add two narrowly scoped brand design capabilities. Reuse existing deck skills through conditional references without new discovery descriptions. Raise 3000-character ceiling to 3100 after trigger review; retain 320-character per-skill ceiling. No unrelated invocation policies changed."
+    },
+    {
+      "date": "2026-10-02",
+      "skills": [
+        "find-skills"
+      ],
+      "before_batch_implicit_description_chars": 3027,
+      "added_description_chars": 39,
+      "after_batch_implicit_description_chars": 3066,
+      "reason": "Narrow skill discovery and evaluation trigger; reuse existing installation flow. Details remain conditional references. Keep 3100-character ceiling unchanged."
+    }
+  ]
 }

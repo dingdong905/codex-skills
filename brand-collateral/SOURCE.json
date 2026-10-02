@@ -1,0 +1,20 @@
+{
+  "sourceRepository": "https://github.com/dingdong905/design-skills",
+  "sourceCommit": "552a823c376b7e05dae51b625332b550dab4ef69",
+  "sourcePath": "design",
+  "selectedModules": [
+    "cip",
+    "social-photos guidance"
+  ],
+  "upstreamAttribution": "claudekit (design metadata)",
+  "importedAt": "2026-10-02",
+  "licenseStatus": "MIT declaration in upstream design/SKILL.md; no standalone license supplied",
+  "adaptations": [
+    "Split from aggregate design entrypoint",
+    "Preserve selected CSV datasets and adapt BM25 search with explicit domains and limits",
+    "Builtin imagegen replaces Gemini generation; no API dependency",
+    "Separate concept/mockup, editable source and production requirements",
+    "Exact canonical names rank ahead of related variants"
+  ],
+  "redistributionNote": "Preserve original attribution and component terms; collection grants no blanket license."
+}

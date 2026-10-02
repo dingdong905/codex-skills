@@ -163,4 +163,41 @@ C:\Users\<你的用户名>\.codex\skills\<skill-name>
 
 ## 来源与许可证
 
-本仓库包含基于开源项目改编的内容，详细来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。仓库内容按 MIT License 发布；上游内容仍保留其原始版权和许可条件。
+本仓库包含基于开源项目改编的内容，详细来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。仓库自有内容按 MIT License 发布；第三方内容保留原始版权与许可条件。许可未明确的新增组件以各技能 SOURCE.json 和下方集成说明为准。
+
+
+## 第一批设计技能
+
+| 技能 | 用途 | 示例 |
+| --- | --- | --- |
+| `ui-ux-pro-max` | 本地 UI/UX 设计建议检索与界面审查 | `使用 $ui-ux-pro-max 为后台页面选择布局和交互方案` |
+| `brand` | 品牌语气、视觉指南、资产规范与明确色值同步 | `使用 $brand 整理品牌指南并审查一致性` |
+| `design-system` | 三层 Token、主题 CSS 与组件状态规范 | `使用 $design-system 修复暗色主题的组件 Token` |
+
+来源、适配范围、安装及验证见 [设计技能集成说明](docs/design-skills-integration.md)。design-system 限于 Token，不接管现有 PPT 流程。组件许可状态分别记录在各技能 SOURCE.json，第三方资源不统一套用仓库许可。
+
+
+## 第二批设计技能
+
+| 技能 | 用途 | 示例 |
+| --- | --- | --- |
+| `hallmark` | 页面视觉审查、结构重设计、参考设计分析 | `使用 $hallmark 审查这个页面的层级和结构` |
+| `banner-design` | imagegen 素材、横幅/封面排版与 PNG 导出检查 | `使用 $banner-design 制作 1500×500 的活动封面` |
+| `ui-styling` | 现有 React/shadcn/Tailwind 项目的样式与主题实现 | `使用 $ui-styling 修复弹窗的焦点和暗色样式` |
+
+与第一批按任务协作，详见 [第二批集成说明](docs/design-skills-integration-batch-2.md)。新增 description 经收窄后保持现有 3000 字符预算。上游许可不明确或冲突的组件仍按 SOURCE.json 记录，公开再分发前需补齐授权。
+
+
+## 第三批设计技能
+
+| 技能/资料 | 用途 | 示例 |
+| --- | --- | --- |
+| `logo-design` | Logo 简报、风格检索、概念与矢量交付 | `使用 $logo-design 设计并评审品牌字标` |
+| `brand-collateral` | 名片、信纸、包装与品牌展示稿 | `使用 $brand-collateral 制作名片与信纸` |
+| PPT 按需参考 | 融资叙事、数据图表、技术演示与比较布局 | 由 pitch-deck/data-report-deck/technical-explainer-deck 原有入口读取 |
+
+详见 [第三批集成说明](docs/design-skills-integration-batch-3.md)。离线检索使用 Python 标准库，生图使用环境已有 imagegen；概念图、展示稿、可编辑源与生产文件分别交付。
+
+## 技能发现与评估
+
+新增 find-skills：先检查已有能力，再搜索和比较外部候选；用户要求接入时完成来源记录、上下文预算与适配验证。详见 [集成说明](docs/find-skills-integration.md)。

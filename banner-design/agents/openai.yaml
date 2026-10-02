@@ -1,0 +1,4 @@
+interface:
+  display_name: "横幅与社交素材"
+  short_description: "生成横幅和封面素材，结合可编辑排版并核对目标像素、安全区与导出"
+  default_prompt: "使用 $banner-design 完成当前界面或素材任务，并遵循项目已有约束。"
