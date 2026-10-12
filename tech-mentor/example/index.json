@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "topics-metallb",
+      "kind": "teaching",
+      "files": [
+        "topics/metallb.md"
+      ],
+      "scenario": "需要对照该文件记录的具体案例时",
+      "preconditions": "核对当前任务、输入、版本与授权范围；按原文前提使用",
+      "expected": "保留原记录的实际/预期结果与未验证部分；当次重新验证",
+      "limits": "不作为默认事实、默认参数或持续授权；样例进度不代表当前用户",
+      "source": "从原仓库文件迁移，内容中的来源与许可保留；迁移不代表重新核验",
+      "verified_at": "unknown"
+    }
+  ]
+}

@@ -61,9 +61,9 @@ metadata:
 - 估值：P/E、P/B、P/S、EV/EBITDA、PEG。
 
 ```bash
-python scripts/ratio_calculator.py assets/sample_financial_data.json
-python scripts/ratio_calculator.py assets/sample_financial_data.json --format json
-python scripts/ratio_calculator.py assets/sample_financial_data.json --category profitability
+python scripts/ratio_calculator.py <input.json>
+python scripts/ratio_calculator.py <input.json> --format json
+python scripts/ratio_calculator.py <input.json> --category profitability
 ```
 
 ### DCF：`scripts/dcf_valuation.py`
@@ -71,9 +71,9 @@ python scripts/ratio_calculator.py assets/sample_financial_data.json --category 
 功能包括 CAPM/WACC、收入与自由现金流预测、永续增长和退出倍数终值、企业价值/股权价值，以及折现率×增长率双向敏感性分析。
 
 ```bash
-python scripts/dcf_valuation.py assets/sample_financial_data.json
-python scripts/dcf_valuation.py assets/sample_financial_data.json --format json
-python scripts/dcf_valuation.py assets/sample_financial_data.json --projection-years 7
+python scripts/dcf_valuation.py <input.json>
+python scripts/dcf_valuation.py <input.json> --format json
+python scripts/dcf_valuation.py <input.json> --projection-years <years>
 ```
 
 ### 预算差异：`scripts/budget_variance_analyzer.py`
@@ -81,9 +81,9 @@ python scripts/dcf_valuation.py assets/sample_financial_data.json --projection-y
 计算金额和百分比差异，默认重大性门槛为 10% 或 50,000 美元，并按收入/费用逻辑判断有利或不利。
 
 ```bash
-python scripts/budget_variance_analyzer.py assets/sample_financial_data.json
-python scripts/budget_variance_analyzer.py assets/sample_financial_data.json --format json
-python scripts/budget_variance_analyzer.py assets/sample_financial_data.json --threshold-pct 5 --threshold-amt 25000
+python scripts/budget_variance_analyzer.py <input.json>
+python scripts/budget_variance_analyzer.py <input.json> --format json
+python scripts/budget_variance_analyzer.py <input.json> --threshold-pct <percent> --threshold-amt <amount>
 ```
 
 ### 预测：`scripts/forecast_builder.py`
@@ -91,9 +91,9 @@ python scripts/budget_variance_analyzer.py assets/sample_financial_data.json --t
 支持驱动因素收入预测、13 周滚动现金流、基准/乐观/悲观情景和简单线性趋势分析。
 
 ```bash
-python scripts/forecast_builder.py assets/sample_financial_data.json
-python scripts/forecast_builder.py assets/sample_financial_data.json --format json
-python scripts/forecast_builder.py assets/sample_financial_data.json --scenarios base,bull,bear
+python scripts/forecast_builder.py <input.json>
+python scripts/forecast_builder.py <input.json> --format json
+python scripts/forecast_builder.py <input.json> --scenarios base,bull,bear
 ```
 
 ## 按需参考资料
@@ -123,7 +123,7 @@ python scripts/forecast_builder.py assets/sample_financial_data.json --scenarios
 1. **扁平结构**：工具所需字段位于顶层。
 2. **组合结构**：四类输入分别放在 `ratio_analysis`、`dcf_valuation`、`budget_variance`、`forecast` 下。
 
-完整示例见 `assets/sample_financial_data.json`。脚本会自动识别结构；缺少可用字段时应以非零状态退出并给出明确错误，不得用臆测数据填补。
+完整示例见 `example/sample_financial_data.json`。脚本会自动识别结构；缺少可用字段时应以非零状态退出并给出明确错误，不得用臆测数据填补。
 
 ## 依赖与边界
 

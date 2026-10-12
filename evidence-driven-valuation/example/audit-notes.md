@@ -54,6 +54,5 @@
 python -B -m unittest discover -s <valuation-skill>/scripts -q
 python -B -m unittest discover -s <intake-skill>/scripts -q
 python -X utf8 -B <skill-creator>/scripts/quick_validate.py <skill-dir>
-python -B <valuation-skill>/scripts/valuation_engine.py <valuation-skill>/examples/synthetic-handoff.json
+python -B <valuation-skill>/scripts/valuation_engine.py <valuation-skill>/example/synthetic-handoff.json
 ```
-

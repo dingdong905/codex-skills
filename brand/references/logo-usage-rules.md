@@ -86,13 +86,8 @@ Where [x] = height of logo mark
 - ❌ Add additional elements
 
 ### Visual Examples
-```
-WRONG: Stretched      WRONG: Rotated       WRONG: Wrong color
-┌──────────────┐      ┌────────┐          ┌────────┐
-│   L O G O    │      │  /    │          │ LOGO   │ <- wrong color
-└──────────────┘      │ /LOGO │          └────────┘
-                      └───────/
-```
+
+需要具体演示时按需读取 [案例](../example/logo-misuse.md)。
 
 ## Co-branding
 

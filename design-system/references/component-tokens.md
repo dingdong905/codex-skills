@@ -192,23 +192,4 @@ Component-specific tokens referencing semantic layer.
 
 ## Usage Example
 
-```css
-.button {
-  background: var(--button-bg);
-  color: var(--button-fg);
-  padding: var(--button-padding-y) var(--button-padding-x);
-  border-radius: var(--button-radius);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  transition: background var(--duration-fast);
-}
-
-.button:hover {
-  background: var(--button-hover-bg);
-}
-
-.button.secondary {
-  background: var(--button-secondary-bg);
-  color: var(--button-secondary-fg);
-}
-```
+需要具体演示时按需读取 [案例](../example/component-usage.md)。

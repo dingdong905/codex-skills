@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "sample-financial-data",
+      "kind": "synthetic",
+      "files": [
+        "sample_financial_data.json"
+      ],
+      "scenario": "需要对照该文件记录的具体案例时",
+      "preconditions": "核对当前任务、输入、版本与授权范围；按原文前提使用",
+      "expected": "保留原记录的实际/预期结果与未验证部分；当次重新验证",
+      "limits": "不作为默认事实、默认参数或持续授权；样例进度不代表当前用户",
+      "source": "从原仓库文件迁移，内容中的来源与许可保留；迁移不代表重新核验",
+      "verified_at": "unknown"
+    },
+    {
+      "id": "expected-output",
+      "kind": "synthetic",
+      "files": [
+        "expected_output.json"
+      ],
+      "scenario": "对照财务工具的示意输出结构",
+      "preconditions": "以当前工具输出和输入契约重新验证",
+      "expected": "展示字段结构，示意数字不作为回归金标准",
+      "limits": "不是真实财务数据或实际运行结果",
+      "source": "原 assets/expected_output.json 的 _description 明确为 illustrative 输出",
+      "verified_at": "unknown"
+    }
+  ]
+}

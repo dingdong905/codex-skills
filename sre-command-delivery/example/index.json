@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "offline-audit-goal-closure",
+      "kind": "observed",
+      "files": ["offline-audit-goal-closure.md"],
+      "scenario": "用户要求无源部署依赖自查，并纠正最新增量物料版本",
+      "preconditions": "存在代码、控制端运行时和仍在消费的节点 RPM 包，可进行只读检查和隔离 mock",
+      "expected": "纠正对象后继续原目标，读取真实归档及角色路径，交付可由正式步骤执行的修复方案；不把静态、mock 或已有机器状态冒充无源安装验收",
+      "limits": "不继承历史环境、物料版本或授权；未验证真实 RPM 依赖安装，实施需重新确认范围",
+      "source": "2026-10-09 用户会话与本地归档/control-flow 核验，脱敏复盘",
+      "verified_at": "2026-10-09"
+    }
+  ]
+}

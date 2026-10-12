@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "synthetic-handoff",
+      "kind": "synthetic",
+      "files": [
+        "synthetic-handoff.json"
+      ],
+      "scenario": "需要对照该文件记录的具体案例时",
+      "preconditions": "核对当前任务、输入、版本与授权范围；按原文前提使用",
+      "expected": "保留原记录的实际/预期结果与未验证部分；当次重新验证",
+      "limits": "不作为默认事实、默认参数或持续授权；样例进度不代表当前用户",
+      "source": "从原仓库文件迁移，内容中的来源与许可保留；迁移不代表重新核验",
+      "verified_at": "unknown"
+    },
+    {
+      "id": "audit-notes",
+      "kind": "observed",
+      "files": [
+        "audit-notes.md"
+      ],
+      "scenario": "核对估值与证据账本的历史修复、算例和来源",
+      "preconditions": "以当前实现和 schema 重新核验，历史路径不作默认事实",
+      "expected": "保留原审计观察及未验证部分；通用限制另行引用",
+      "limits": "历史测试通过不证明当前体系完整或真实估值有效",
+      "source": "原 references/audit-notes.md，原文保留固定版本来源和核验记录",
+      "verified_at": "2026-09-12"
+    }
+  ]
+}

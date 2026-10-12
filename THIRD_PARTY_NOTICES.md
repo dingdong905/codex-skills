@@ -97,3 +97,10 @@ PPT 栈还评估了 `presenton/presenton`（Apache-2.0）和 `gitbrent/PptxGenJS
 - 来源：https://github.com/vercel-labs/skills，固定提交 3694740352eeef5cdd689af694c485f1ff62eec3，路径 skills/find-skills/SKILL.md。
 - MIT，Copyright (c) 2026 Vercel, Inc.；许可原文保存在 find-skills/LICENSE.txt。
 - 适配为中文精简入口，收紧触发、补充源码/许可/重叠检查、来源记录、上下文预算及隔离验证；未导入 CLI 源码或依赖。
+
+## Handoff 工作流适配
+
+- handoff 独立重写中文流程和 Python 标准库脚本；未复制上游执行代码、hooks 或会话导出器。
+- 主要借鉴 klittle32/handoff-skill 的目标导向交接与首句、timyeou1234/context-handoff 的检查点和接手核验、jugugug/AgentHandoff 的渐进读取思想。
+- 固定提交、许可、其他候选与边界随 handoff/SOURCE.json 安装携带；适配流程的上游 MIT 声明保留在 handoff/THIRD_PARTY_NOTICES.txt。
+- 评估与未实测部分见 [选型记录](docs/handoff-evaluation.md)。仓库内交接教学场景在 handoff/example/，实际任务交接留在用户项目。

@@ -1,6 +1,6 @@
 # 估值输入 v2
 
-可执行完整合成实例见 ../examples/synthetic-handoff.json。它只验证交接，不代表真实充分证据。
+可执行完整合成实例见 ../example/synthetic-handoff.json。它只验证交接，不代表真实充分证据。
 
 ## 顶层
 
@@ -62,4 +62,3 @@ financing_analysis 包含 inputs/provenance/scope_basis，绑定 __financing__�
 旧版输入不可自动兼容：补查时区、版本、真实引用、完整业务和阈值，重建节点与归属；缺失就报告缺口，不为迁移编造证据。
 
 运行 python -B scripts/valuation_engine.py <input.json>。只支持 evaluate/CLI 作为受闸门保护入口；底层公式函数不执行完整审计。
-

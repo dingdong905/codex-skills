@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "verified_at": "2026-10-10",
+  "license": "MIT",
+  "implementation": "Original Chinese workflow and standard-library Python helper; no upstream runtime code, hooks, CLI binaries or transcript data copied.",
+  "sources": [
+    {
+      "repository": "https://github.com/open-grove/handoff",
+      "commit": "4bfda97b61816c82661ac350b8975cf44263312d",
+      "license": "Apache-2.0",
+      "role": "evaluated: hosted sharing, not bundled",
+      "license_url": "https://github.com/open-grove/handoff/blob/4bfda97b61816c82661ac350b8975cf44263312d/LICENSE"
+    },
+    {
+      "repository": "https://github.com/rosehgal/handoff",
+      "commit": "3a8444264514012422487f74629a29c6b98588dd",
+      "license": "MIT",
+      "role": "evaluated: Claude/Cursor hooks, not bundled",
+      "license_url": "https://github.com/rosehgal/handoff/blob/3a8444264514012422487f74629a29c6b98588dd/LICENSE"
+    },
+    {
+      "repository": "https://github.com/jugugug/AgentHandoff",
+      "commit": "cabe145ed3c757166bd2b07c0f21e9098f4fb99b",
+      "license": "MIT",
+      "role": "design inspiration: progressive evidence retrieval; exporter not copied",
+      "license_url": "https://github.com/jugugug/AgentHandoff/blob/cabe145ed3c757166bd2b07c0f21e9098f4fb99b/LICENSE"
+    },
+    {
+      "repository": "https://github.com/platonissex/session-handoff",
+      "commit": "a06238a20942be47df40f18f09f2384b1f540ee9",
+      "license": "MIT",
+      "role": "evaluated: local multi-CLI extraction, not bundled",
+      "license_url": "https://github.com/platonissex/session-handoff/blob/a06238a20942be47df40f18f09f2384b1f540ee9/LICENSE"
+    },
+    {
+      "repository": "https://github.com/klittle32/handoff-skill",
+      "commit": "57089b6e1ce61498ec70852e46d41b2f8f12fa00",
+      "license": "MIT",
+      "role": "design adaptation: goal-oriented handoff, artifact pointers and paste-ready prompt; rewritten",
+      "license_url": "https://github.com/klittle32/handoff-skill/blob/57089b6e1ce61498ec70852e46d41b2f8f12fa00/LICENSE"
+    },
+    {
+      "repository": "https://github.com/jumpifequal/handoff-skill",
+      "commit": "0e6cb31a66ede5c4791e8fa077e23bee002bb698",
+      "license": "MIT",
+      "role": "evaluated: provenance and exact WIP; hooks/scripts not bundled",
+      "license_url": "https://github.com/jumpifequal/handoff-skill/blob/0e6cb31a66ede5c4791e8fa077e23bee002bb698/LICENSE"
+    },
+    {
+      "repository": "https://github.com/timyeou1234/context-handoff",
+      "commit": "0cf554bd8c26abb00eaf656d373453959387d29f",
+      "license": "MIT",
+      "role": "design adaptation: safe checkpoint and destination state verification; rewritten",
+      "license_url": "https://github.com/timyeou1234/context-handoff/blob/0cf554bd8c26abb00eaf656d373453959387d29f/LICENSE"
+    }
+  ],
+  "limitations": [
+    "Repository README and source were inspected; upstream tools were not installed or run.",
+    "No end-to-end Codex new-thread, hooks or cross-device transfer was tested.",
+    "jumpifequal README says license absent, but repository LICENSE and API identify MIT at the inspected commit; LICENSE used."
+  ]
+}

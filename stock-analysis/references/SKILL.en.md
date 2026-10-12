@@ -192,7 +192,7 @@ Read `references/09-risk-and-macro.md`. Write a genuine bear case, not a strawma
 
 ### Stage 8 — Score and write
 
-Score using `references/11-scoring-rubric.md` (run `scripts/score.py` for the arithmetic), then write the report using the template in `references/12-report-template.md`. Before writing, read the worked exemplars in `examples/` to calibrate the target quality: `examples/standard-analysis-example.md` (a full Standard-mode report that passes the linter and embeds real `valuation.py` output) and `examples/forensic-analysis-example.md` (a Forensic-mode review following the F0–F5 template). They are fictional by design — models of *how*, never sources of figures.
+Score using `references/11-scoring-rubric.md` (run `scripts/score.py` for the arithmetic), then write the report using the template in `references/12-report-template.md`. Before writing, read the worked exemplars in `example/` to calibrate the target quality: `example/standard-analysis-example.md` (a full Standard-mode report that passes the linter and embeds real `valuation.py` output) and `example/forensic-analysis-example.md` (a Forensic-mode review following the F0–F5 template). They are fictional by design — models of *how*, never sources of figures.
 
 ### Stage 9 — Challenge the draft before delivering it
 

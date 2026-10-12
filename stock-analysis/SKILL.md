@@ -171,7 +171,7 @@ python scripts/valuation.py <inputs.json>
 
 ### 阶段 8：评分与写作
 
-使用 `references/11-scoring-rubric.md` 和 `scripts/score.py` 计算行业相对评分；按 `references/12-report-template.md` 写报告。`examples/` 仅用于学习呈现方式，示例数字是虚构的，不能当作证据。
+使用 `references/11-scoring-rubric.md` 和 `scripts/score.py` 计算行业相对评分；按 `references/12-report-template.md` 写报告。`example/` 仅用于学习呈现方式，示例数字是虚构的，不能当作证据。
 
 ### 阶段 9：挑战结论
 

@@ -151,32 +151,7 @@ Parse markdown to extract:
 
 ## Color Palette Examples
 
-### Tech/SaaS
-```
-Primary: #2563EB (Blue)
-Secondary: #8B5CF6 (Purple)
-Accent: #10B981 (Emerald)
-Background: #F9FAFB
-Text: #111827
-```
-
-### Marketing/Creative
-```
-Primary: #F97316 (Orange)
-Secondary: #EC4899 (Pink)
-Accent: #14B8A6 (Teal)
-Background: #FFFFFF
-Text: #1F2937
-```
-
-### Professional/Corporate
-```
-Primary: #1E40AF (Navy)
-Secondary: #475569 (Slate)
-Accent: #0EA5E9 (Sky)
-Background: #F8FAFC
-Text: #0F172A
-```
+需要具体演示时按需读取 [案例](../example/color-palettes.md)。
 
 ## Tools & Resources
 

@@ -29,6 +29,9 @@ Codex 与 WorkBuddy 各自维护完整、原生兼容的一套 Skill，不通过
 | `research-summarizer` | 已提供论文、报告和网页的结构化摘要 | `使用 $research-summarizer 比较这些报告` |
 | `context-budget` | 审计上下文膨胀并减少 Token 消耗 | `使用 $context-budget 审计当前配置` |
 | `memory-curator` | 管理 Codex 记忆、项目约定和任务交接 | `使用 $memory-curator 整理长期记忆` |
+| `handoff` | 本地任务交接、续做首句与接手状态核验 | `使用 $handoff 为当前任务准备交接` |
+| `android-phone-ops` | Android 实机连接、HyperOS 权限与 APK 排障 | `使用 $android-phone-ops 排查手机上的应用` |
+| `sre-command-delivery` | 服务器、集群与网络排障的命令交付和真实结果迭代 | `使用 $sre-command-delivery 根据这段输出给下一步命令` |
 | `tech-mentor` | 显式启动的系统学习、练习与掌握检验 | `使用 $tech-mentor 系统学习 MetalLB` |
 | `presentation-studio` | 薄编排器：形成 brief 并路由 PPT 品类 | `使用 $presentation-studio 规划这份汇报` |
 | `technical-explainer-deck` | 精细技术体系、架构、机制、参数和选型演示 | `使用 $technical-explainer-deck 做 AI Infra 技术培训` |
@@ -70,7 +73,7 @@ PPT 能力采用“专业品类 Skill + 统一执行层 + 薄编排器 + 评测�
 
     python -m unittest discover -s tech-mentor/tests -v
     python evals/tech-mentor/score_eval.py lint
-    python tech-mentor/scripts/validate_topic.py tech-mentor/references/topics/metallb.md
+    python tech-mentor/scripts/validate_topic.py tech-mentor/example/topics/metallb.md
 
 ## A 股研究分支
 
@@ -201,3 +204,15 @@ C:\Users\<你的用户名>\.codex\skills\<skill-name>
 ## 技能发现与评估
 
 新增 find-skills：先检查已有能力，再搜索和比较外部候选；用户要求接入时完成来源记录、上下文预算与适配验证。详见 [集成说明](docs/find-skills-integration.md)。
+
+## Skill 抽象与案例治理
+
+通用规则保留在 SKILL.md / references；具体案例统一放各 Skill 的 example/，并登记 index.json。AI 生成和导入遵循 [仓库规范](docs/skill-governance.md) 与 AGENTS.md，交付前运行 python -B scripts/lint_skill_governance.py；CI 执行相同检查，语义通用性另行复核。
+
+## 任务交接
+
+新增 handoff：创建本地交接包和续做首句，接手时比较目录、Git 状态和关键产物；不依赖云服务、hooks 或完整聊天导出。开源候选与取舍见 [交接选型记录](docs/handoff-evaluation.md)。
+
+离线校验：
+
+    python -B -m unittest discover -s handoff/tests -v

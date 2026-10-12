@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-08",
+  "checks": [
+    {
+      "check": "governance tests",
+      "exit_code": 0,
+      "summary": [
+        "Ran 8 tests in 0.057s",
+        "OK"
+      ]
+    },
+    {
+      "check": "stock disclosure tests",
+      "exit_code": 0,
+      "summary": [
+        "Ran 4 tests in 0.207s",
+        "OK"
+      ]
+    },
+    {
+      "check": "valuation tests",
+      "exit_code": 0,
+      "summary": [
+        "Ran 59 tests in 0.303s",
+        "OK"
+      ]
+    },
+    {
+      "check": "teaching eval",
+      "exit_code": 0,
+      "summary": [
+        "PASS: tech-mentor eval cases and explicit-only policy are valid"
+      ]
+    },
+    {
+      "check": "teaching example",
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "check": "stock report example",
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "check": "official structure: academic-search",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: android-phone-ops",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: brand",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: design-system",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: evidence-driven-valuation",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: financial-analyst",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: find-skills",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: stock-analysis",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: tech-mentor",
+      "exit_code": 0
+    },
+    {
+      "check": "official structure: ui-ux-pro-max",
+      "exit_code": 0
+    },
+    {
+      "check": "financial migrated input: ratio_calculator",
+      "exit_code": 0,
+      "json_valid": true
+    },
+    {
+      "check": "financial migrated input: dcf_valuation",
+      "exit_code": 0,
+      "json_valid": true
+    },
+    {
+      "check": "financial migrated input: budget_variance_analyzer",
+      "exit_code": 0,
+      "json_valid": true
+    },
+    {
+      "check": "financial migrated input: forecast_builder",
+      "exit_code": 0,
+      "json_valid": true
+    },
+    {
+      "check": "valuation migrated input",
+      "exit_code": 0
+    },
+    {
+      "check": "teaching tests",
+      "exit_code": 0,
+      "summary": [
+        "Ran 4 tests in 0.001s",
+        "OK"
+      ]
+    },
+    {
+      "check": "WorkBuddy governance tests",
+      "exit_code": 0,
+      "summary": [
+        "Ran 8 tests in 0.053s",
+        "OK"
+      ]
+    },
+    {
+      "check": "Codex strict governance",
+      "exit_code": 0,
+      "summary": [
+        "Skill governance: 33 skills; 0 errors"
+      ]
+    },
+    {
+      "check": "WorkBuddy strict governance",
+      "exit_code": 0,
+      "summary": [
+        "Skill governance: 17 skills; 0 errors"
+      ]
+    },
+    {
+      "check": "Codex whitespace",
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "check": "WorkBuddy whitespace",
+      "exit_code": 0,
+      "summary": []
+    },
+    {
+      "check": "platform metadata preservation",
+      "exit_code": 0,
+      "skills": 50
+    },
+    {
+      "check": "pre-existing unrelated changes preservation",
+      "exit_code": 0,
+      "summary": [
+        "original install.ps1 unchanged",
+        "pre-existing sre-command-delivery files unchanged"
+      ]
+    },
+    {
+      "check": "supplement strict governance",
+      "exit_code": 0
+    },
+    {
+      "check": "supplement valuation structure",
+      "exit_code": 0
+    },
+    {
+      "check": "supplement whitespace",
+      "exit_code": 0
+    },
+    {
+      "check": "supplement source preservation",
+      "exit_code": 0,
+      "files": 2
+    }
+  ],
+  "failures": [],
+  "scope": "已批准的两份清单及两项补充迁移。",
+  "registered_cases": 23
+}

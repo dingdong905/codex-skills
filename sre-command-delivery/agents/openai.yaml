@@ -1,0 +1,6 @@
+interface:
+  display_name: "运维排障命令交付"
+  short_description: "面向服务器、集群与网络排障，交付可执行命令并持续核对真实采集结果"
+  default_prompt: "使用 $sre-command-delivery，根据当前目标和真实输出给出下一步可直接执行的排障命令。"
+policy:
+  allow_implicit_invocation: true

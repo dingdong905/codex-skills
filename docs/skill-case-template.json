@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "<case-id>",
+      "kind": "<observed|synthetic|teaching>",
+      "files": [
+        "<file-relative-to-example>"
+      ],
+      "scenario": "<when-to-read>",
+      "preconditions": "<inputs-and-environment>",
+      "expected": "<observed-or-expected-result>",
+      "limits": "<non-applicable-scope>",
+      "source": "<source-and-license>",
+      "verified_at": "unknown"
+    }
+  ]
+}

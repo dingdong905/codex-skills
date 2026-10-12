@@ -59,13 +59,8 @@ project-root/
 *Use "evergreen" for non-campaign assets
 
 ### Examples
-```
-banner_claude-launch_hero-image_20251209_16-9.png
-logo_brand-refresh_horizontal-full-color_20251209.svg
-design_holiday-campaign_email-hero_20251209_dark-mode.psd
-video_product-demo_feature-walkthrough_20251209.mp4
-infographic_evergreen_pricing-comparison_20251209.png
-```
+
+需要具体演示时按需读取 [案例](../example/asset-names.md)。
 
 ## Metadata Schema
 

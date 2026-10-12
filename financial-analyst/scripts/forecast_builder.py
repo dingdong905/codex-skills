@@ -34,7 +34,7 @@ def resolve_input_section(
     Accept both supported input shapes:
     1. Flat: the expected keys live at the top level of the JSON file.
     2. Nested: the data lives under a per-tool section key, as in
-       assets/sample_financial_data.json (which bundles inputs for all
+       example/sample_financial_data.json (which bundles inputs for all
        four financial-analyst scripts in one file).
     """
     if any(key in data for key in flat_keys):

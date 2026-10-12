@@ -1,0 +1,3 @@
+interface:
+  display_name: "Android 手机操作"
+  short_description: "无线 ADB、HyperOS 权限与实机故障排查"

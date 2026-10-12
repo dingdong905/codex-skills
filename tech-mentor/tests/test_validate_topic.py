@@ -50,7 +50,7 @@ class ValidateTopicTests(unittest.TestCase):
         self.assertIn("TOPIC_POSSIBLE_SECRET", {item["rule_id"] for item in findings})
 
     def test_cli_reads_utf8_bom(self):
-        path = Path(__file__).resolve().parents[1] / "references" / "topics" / "metallb.md"
+        path = Path(__file__).resolve().parents[1] / "example" / "topics" / "metallb.md"
         with redirect_stdout(io.StringIO()):
             self.assertEqual(0, MODULE.main([str(path), "--json"]))
 

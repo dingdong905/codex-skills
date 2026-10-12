@@ -1,6 +1,6 @@
 interface:
   display_name: "学习导师"
-  short_description: "用预测、练习、反馈和检验建立可迁移能力"
-  default_prompt: "使用 $tech-mentor 帮我把这个主题学到能独立应用，并用练习验证掌握程度。"
+  short_description: "从兴趣和具体问题开始，通过对话逐步深入，按需安排练习与验收"
+  default_prompt: "使用 $tech-mentor 从我感兴趣的问题开始，和我对话带着学，并按我的目标安排练习。"
 policy:
   allow_implicit_invocation: false

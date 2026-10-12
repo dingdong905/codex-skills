@@ -251,78 +251,15 @@ A single sector key is wrong for a company that is 55% EPC, 30% IT services and 
 
 ## 11. Worked example A — the lower-margin company scores higher
 
-Two illustrative companies, generic and hypothetical. **Distributor A**: 4% operating margin, negative working capital, high asset turnover. **Software B**: 30% operating margin, net cash, heavy stock-based compensation. Scored on their own sectors' bands and sector weights.
-
-Metric level, showing the margin metric doing the opposite of what the composite does:
-
-| Metric | Distributor A | sub-score | Software B | sub-score |
-|---|---|---|---|---|
-| Operating margin | 4.0% (band 2/5/9/14) | 4.2 | 30% (band 10/18/25/35) | **8.8** |
-| ROCE | 26% (band 8/14/22/35) | **8.3** | 24% (band 15/25/35/50) | 4.8 |
-| ROIIC | 24% | **9.0** | 13% | 5.4 |
-| Cash conversion cycle | −20 days | 9.0 | +40 days | 7.1 |
-| FCF margin | 2.0% | 3.8 | 12.0% | **8.9** |
-| SBC / revenue | not applicable | — | 14% | 4.4 |
-| 5y dilution | +2% | 7.8 | +18% | 4.7 |
-| P/E | 34× (band 90/60/40/28) | **8.8** | 42× (band 60/38/25/17) | 4.6 |
-| Reverse-DCF growth gap | +1.0pp | 6.7 | +4.0pp | 4.5 |
-
-Category level:
-
-| Category | Distributor A | Software B |
-|---|---|---|
-| Business quality & moat | 5.9 | 5.6 |
-| Profitability & returns | 7.6 | 7.4 |
-| Earnings quality | 6.9 | 6.5 |
-| Balance sheet | 9.2 | 9.4 |
-| Growth & reinvestment | 8.0 | 5.8 |
-| Governance | 7.9 | 7.2 |
-| Valuation | 6.4 | 4.3 |
-| Risk | 5.5 | 5.8 |
-| **Composite** | **7.14 — Above average** | **6.30 — Average** |
-
-Software B wins the margin comparison decisively — 8.8 against 4.2 — and still loses the composite. Three mechanisms produce that, and each is a real economic fact rather than a scoring artefact:
-
-1. **Sector-relative bands neutralise the structural margin gap.** 4% is strong for a distributor; 30% is unremarkable for software. The margin difference was never information about quality.
-2. **Return on capital, not margin, is what compounds.** Distributor A converts a thin margin into 26% ROCE through turnover and supplier-funded working capital, and reinvests at 24% incremental returns. Software B's high margin sits on a capital base that earns less than its sector's median, and its incremental returns are half the distributor's.
-3. **Per-share and price effects.** Software B's 18% five-year dilution and 14% SBC mean the owner captures less of the profit than the income statement implies, and it is priced 4pp of growth above what the analysis can defend.
-
-If Distributor A's numbers had come with three years of CFO at half of PAT, the cash-flow divergence gate would cap the composite at 4.0 and the entire comparison above would become irrelevant. That is the intended behaviour.
-
----
+需要具体演示时按需读取 [案例](../example/scoring-sector-comparison.md)。
 
 ## 12. Worked example B — a gate overrides a strong scorecard
 
-An illustrative company scores well across the board: profitability 8.1, earnings quality 7.4, balance sheet 7.9, growth 7.7, valuation 6.2 — a pre-gate composite around 7.6, comfortably "Strong". Then the shareholding pattern shows 62% of promoter holding pledged, up from 31% two years ago.
-
-- **Flat-average treatment**: promoter pledging is one governance metric at weight 2.0 inside a 10% category. Scoring it 0 instead of 10 moves the composite by 0.22 — from roughly 7.6 to roughly 7.4. The reader sees a strong company with a slight governance blemish.
-- **Gate treatment**: composite capped at 4.0, printed with the pre-gate figure alongside so nothing is hidden, and the finding stated in the report's opening section.
-
-The gate treatment is right because the mechanism is not gradual. Heavy pledging couples the share price to control: a price fall triggers margin calls, invoked shares and forced selling, which drives a further fall. That reflexive loop is independent of business quality and has repeatedly destroyed operationally sound companies. Averaging spreads a step-function risk across a continuous scale and makes it disappear. **[India]** This gate is India-specific in its data source — the encumbrance table in the quarterly shareholding pattern — but the underlying risk exists anywhere insiders have pledged control blocks; in US filings, look for margin-loan disclosure in the proxy and Schedule 13D/G footnotes.
-
----
+需要具体演示时按需读取 [案例](../example/scoring-gates.md)。
 
 ## 13. Worked example C — renormalisation when data is missing
 
-A recently listed company: no governance history worth scoring and no reliable multi-year growth series. Six of eight categories carry data.
-
-| Category | Default weight | Score | Renormalised weight | Contribution |
-|---|---|---|---|---|
-| Business quality | 15% | 6.0 | 19.2% | 1.15 |
-| Profitability | 20% | 8.0 | 25.6% | 2.05 |
-| Earnings quality | 15% | 7.0 | 19.2% | 1.34 |
-| Balance sheet | 12% | 6.5 | 15.4% | 1.00 |
-| Growth | 12% | *no data* | dropped | — |
-| Governance | 10% | *no data* | dropped | — |
-| Valuation | 10% | 5.0 | 12.8% | 0.64 |
-| Risk | 6% | 6.0 | 7.7% | 0.46 |
-| **Composite** | | | **100%** | **6.65 — INDICATIVE ONLY** |
-
-Category coverage is 78%, above the 70% floor — but governance carries a default weight of 10%, so the empty-major-category rule fires and the composite is marked indicative. That is the correct outcome: a company whose governance you have not assessed is not a 6.65, it is an unfinished analysis.
-
-Had the two missing categories been scored 0 instead of dropped, the composite would read **5.19** — a full grade lower, and lower purely because of what the analyst could not find. The report would then be describing the state of the data as though it were the state of the business.
-
----
+需要具体演示时按需读取 [案例](../example/scoring-missing-data.md)。
 
 ## 14. Interpreting a composite
 

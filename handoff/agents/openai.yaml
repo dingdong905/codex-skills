@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务交接"
+  short_description: "保存目标、证据和现场状态，生成续做首句，并在新会话核验后接手"
+  default_prompt: "使用 $handoff 为当前任务生成本地交接包和可粘贴的续做首句。"

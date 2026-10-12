@@ -1,0 +1,532 @@
+diff --git a/evidence-driven-valuation/SKILL.md b/evidence-driven-valuation/SKILL.md
+--- a/evidence-driven-valuation/SKILL.md
++++ b/evidence-driven-valuation/SKILL.md
+@@ -17,4 +17,4 @@
+ 
+ 交付闸门、经营桥、分业务方法与来源、情景价值及每股单位、特殊价值归属、反向条件、缺口和证伪条件。技术面完全分离。
+ 
+-仍需人工核验原文、独立性、重大业务完整性及区间依据。已知限制见 [audit-notes.md](references/audit-notes.md)。[synthetic-handoff.json](example/synthetic-handoff.json) 是纯合成可运行样例，不是投资输入或通用参数模板。
++仍需人工核验原文、独立性、重大业务完整性及区间依据。已知限制见 [已知限制](references/known-limitations.md)。[synthetic-handoff.json](example/synthetic-handoff.json) 是纯合成可运行样例，不是投资输入或通用参数模板。
+diff --git a/evidence-driven-valuation/example/audit-notes.md b/evidence-driven-valuation/example/audit-notes.md
+new file mode 100644
+--- /dev/null
++++ b/evidence-driven-valuation/example/audit-notes.md
+@@ -0,0 +1,58 @@
++# 审计记录：2026-09-12
++
++范围：本机安装的 fundamental-signal-intake 与 evidence-driven-valuation。未修改 WorkBuddy，未同步或推送 Git 仓库。原始备份位于 D:/skills/audit-backups/evidence-models-20260912。
++
++## 实际修复
++
++- 时间比较保留时分秒和时区；拒绝日期/无时区、同日未来信息、截止后修订。保留真实历史版本的晚采集能力。
++- provenance 从非空声明改为存在性、数值、业务/驱动、单位、时间及递归依赖解析；覆盖嵌套数组，拒绝循环和市场信息污染正向价值。
++- 研究计划独立于闸门，重算重大业务/驱动覆盖、来源组、primary 组、时效、口径、覆盖和支持区间，检查隐藏 missing/conflicted。
++- 行业白名单失败关闭；SOTP 经济权益登记及归属桥阻止已登记权益/债权重复计价。
++- 剩余收益终值更正期初账面价值时点；中周期改用 incremental_roe；资产增加处置折现；新产品核验条件路径闭合。
++- 融资侧项计入融资款、投入、发行费用、新债权、新股和失败残值，显示原股东增量，不污染基础价值。
++- 每股价值由金额缩放单位转为 currency/share；未知缩放拒绝。侧项使用的假设在 combined_input_audit 另行披露。
++- 文档升级 v2，保留业务原则，详细契约按需加载；新增合成交接样例。未测量实际 Token 节省，不能宣称具体下降比例。
++
++## 验证结果
++
++本轮最终回归：估值 59/59、账本 5/5。估值套件包含真实 intake CLI → valuation CLI 交接及错误输入非零退出。两 Skill 的 quick_validate 均通过（Windows 使用 python -X utf8 -B）。示例 CLI 独立运行成功。
++
++独立算例：
++
++- 10×3−10−5−5=FCFF 10；零增长、10% 折现的价值 100；10 股对应每股 10。
++- 剩余收益 B0=100、NI1=12、B1=110、ke=10%、终期 ROE=15%、g=2%：164.3181818181818。
++- 资产 121、两年、10% 折现：100。
++- 分阶段新产品算例：26.5；同时拒绝不闭合、重叠路径与错误联合概率。
++- 基础价值100，融资20发5股（原10股），投入20获项目PV30：项目NPV+10，老股东价值增量−13.3333333333333。
++- 经营EV100加40%×被投企业股权价值200=180，母公司债20后160；重复扣被投企业债务被拒绝。
++
++回归通过只说明这些案例成立，不证明体系完整或真实估值有效。
++
++## 开源机制核验（固定版本）
++
++未复制上游代码，未安装依赖或实现实时数据适配器。
++
++- [OpenBB Fetcher](https://github.com/OpenBB-finance/OpenBB/blob/3e071fcc2cd9f891cac6040ae60296dba76dab46/openbb_platform/core/openbb_core/provider/abstract/fetcher.py)：核验 transform_query → extract_data/aextract_data → transform_data 及类型/schema 校验。借鉴统一接口，不声称本地已有供应商连接。
++- [TradingAgents 财报过滤](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/stockstats_utils.py)：filter_financials_by_date 按财务列日期≤cutoff 过滤，不能单独证明公告/修订版本在截止前可用。
++- 同版本 [date_window.py](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/date_window.py) 和 [y_finance.py](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/y_finance.py) 确有历史研究屏蔽实时 profile 等保护；不能据上述缺口断言整个项目没有点时保护。日期窗口及 naive 时间处理仍不同于本地严格时区/盘中截止契约。
++- [FinanceToolkit 估值公式测试](https://github.com/JerBouma/FinanceToolkit/blob/9fa19f9e97fee229dad4d65cf9c1448597af5df5/tests/ratios/test_valuation_model.py)：核验显式确定性输入和 recorder.capture；仅据已检查测试借鉴可复现方式，不扩张为全库正确性背书。
++
++## 剩余缺口与使用限制
++
++1. 来源 URL/快照是元数据，不自动下载、验证真实性或判断是否支持原文结论。来源独立性、覆盖分母、业务完整性、假设区间依据仍可被错误声明；必须人工审核。
++2. 乘除单位维度未完整形式化；阶段转换 guards 不证明因果。多期间营运资金、税/折旧、增长再投资一致性仍需审核。
++3. 银行清洁盈余、OCI、资本充足和终期经济可行性无独立自动验证。
++4. holding 不递归求解复杂所有权/交叉持股，经济 ID 只能防止已登记重复；同一权益用不同 ID 的语义重复仍可能漏检。
++5. 保险、矿业、REIT、生物科技等专门行业模型未实现，必须报告缺口。融资仅 t0 单轮，不支持复杂可转债、多轮或延迟融资。
++6. 反向 DCF 只解恒定增长一个维度；不自动唯一识别全部隐含经营条件。
++7. 尚无真实公司点时数据集、真实供应商适配器、独立模型行为评测或实际 Token 基准。合成案例不能代替这些验证。
++8. v1 输入破坏性不兼容。须补查真实来源和版本重建 v2，禁止自动填零/默认假设迁移。
++
++验证命令：
++
++```text
++python -B -m unittest discover -s <valuation-skill>/scripts -q
++python -B -m unittest discover -s <intake-skill>/scripts -q
++python -X utf8 -B <skill-creator>/scripts/quick_validate.py <skill-dir>
++python -B <valuation-skill>/scripts/valuation_engine.py <valuation-skill>/example/synthetic-handoff.json
++```
+diff --git a/evidence-driven-valuation/example/index.json b/evidence-driven-valuation/example/index.json
+--- a/evidence-driven-valuation/example/index.json
++++ b/evidence-driven-valuation/example/index.json
+@@ -13,6 +13,19 @@
+       "limits": "不作为默认事实、默认参数或持续授权；样例进度不代表当前用户",
+       "source": "从原仓库文件迁移，内容中的来源与许可保留；迁移不代表重新核验",
+       "verified_at": "unknown"
++    },
++    {
++      "id": "audit-notes",
++      "kind": "observed",
++      "files": [
++        "audit-notes.md"
++      ],
++      "scenario": "核对估值与证据账本的历史修复、算例和来源",
++      "preconditions": "以当前实现和 schema 重新核验，历史路径不作默认事实",
++      "expected": "保留原审计观察及未验证部分；通用限制另行引用",
++      "limits": "历史测试通过不证明当前体系完整或真实估值有效",
++      "source": "原 references/audit-notes.md，原文保留固定版本来源和核验记录",
++      "verified_at": "2026-09-12"
+     }
+   ]
+ }
+diff --git a/evidence-driven-valuation/references/audit-notes.md b/evidence-driven-valuation/references/audit-notes.md
+deleted file mode 100644
+--- a/evidence-driven-valuation/references/audit-notes.md
++++ /dev/null
+@@ -1,58 +0,0 @@
+-# 审计记录：2026-09-12
+-
+-范围：本机安装的 fundamental-signal-intake 与 evidence-driven-valuation。未修改 WorkBuddy，未同步或推送 Git 仓库。原始备份位于 D:/skills/audit-backups/evidence-models-20260912。
+-
+-## 实际修复
+-
+-- 时间比较保留时分秒和时区；拒绝日期/无时区、同日未来信息、截止后修订。保留真实历史版本的晚采集能力。
+-- provenance 从非空声明改为存在性、数值、业务/驱动、单位、时间及递归依赖解析；覆盖嵌套数组，拒绝循环和市场信息污染正向价值。
+-- 研究计划独立于闸门，重算重大业务/驱动覆盖、来源组、primary 组、时效、口径、覆盖和支持区间，检查隐藏 missing/conflicted。
+-- 行业白名单失败关闭；SOTP 经济权益登记及归属桥阻止已登记权益/债权重复计价。
+-- 剩余收益终值更正期初账面价值时点；中周期改用 incremental_roe；资产增加处置折现；新产品核验条件路径闭合。
+-- 融资侧项计入融资款、投入、发行费用、新债权、新股和失败残值，显示原股东增量，不污染基础价值。
+-- 每股价值由金额缩放单位转为 currency/share；未知缩放拒绝。侧项使用的假设在 combined_input_audit 另行披露。
+-- 文档升级 v2，保留业务原则，详细契约按需加载；新增合成交接样例。未测量实际 Token 节省，不能宣称具体下降比例。
+-
+-## 验证结果
+-
+-本轮最终回归：估值 59/59、账本 5/5。估值套件包含真实 intake CLI → valuation CLI 交接及错误输入非零退出。两 Skill 的 quick_validate 均通过（Windows 使用 python -X utf8 -B）。示例 CLI 独立运行成功。
+-
+-独立算例：
+-
+-- 10×3−10−5−5=FCFF 10；零增长、10% 折现的价值 100；10 股对应每股 10。
+-- 剩余收益 B0=100、NI1=12、B1=110、ke=10%、终期 ROE=15%、g=2%：164.3181818181818。
+-- 资产 121、两年、10% 折现：100。
+-- 分阶段新产品算例：26.5；同时拒绝不闭合、重叠路径与错误联合概率。
+-- 基础价值100，融资20发5股（原10股），投入20获项目PV30：项目NPV+10，老股东价值增量−13.3333333333333。
+-- 经营EV100加40%×被投企业股权价值200=180，母公司债20后160；重复扣被投企业债务被拒绝。
+-
+-回归通过只说明这些案例成立，不证明体系完整或真实估值有效。
+-
+-## 开源机制核验（固定版本）
+-
+-未复制上游代码，未安装依赖或实现实时数据适配器。
+-
+-- [OpenBB Fetcher](https://github.com/OpenBB-finance/OpenBB/blob/3e071fcc2cd9f891cac6040ae60296dba76dab46/openbb_platform/core/openbb_core/provider/abstract/fetcher.py)：核验 transform_query → extract_data/aextract_data → transform_data 及类型/schema 校验。借鉴统一接口，不声称本地已有供应商连接。
+-- [TradingAgents 财报过滤](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/stockstats_utils.py)：filter_financials_by_date 按财务列日期≤cutoff 过滤，不能单独证明公告/修订版本在截止前可用。
+-- 同版本 [date_window.py](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/date_window.py) 和 [y_finance.py](https://github.com/TauricResearch/TradingAgents/blob/be952b8eccb49720509af544c6675233bc1f10d0/tradingagents/dataflows/y_finance.py) 确有历史研究屏蔽实时 profile 等保护；不能据上述缺口断言整个项目没有点时保护。日期窗口及 naive 时间处理仍不同于本地严格时区/盘中截止契约。
+-- [FinanceToolkit 估值公式测试](https://github.com/JerBouma/FinanceToolkit/blob/9fa19f9e97fee229dad4d65cf9c1448597af5df5/tests/ratios/test_valuation_model.py)：核验显式确定性输入和 recorder.capture；仅据已检查测试借鉴可复现方式，不扩张为全库正确性背书。
+-
+-## 剩余缺口与使用限制
+-
+-1. 来源 URL/快照是元数据，不自动下载、验证真实性或判断是否支持原文结论。来源独立性、覆盖分母、业务完整性、假设区间依据仍可被错误声明；必须人工审核。
+-2. 乘除单位维度未完整形式化；阶段转换 guards 不证明因果。多期间营运资金、税/折旧、增长再投资一致性仍需审核。
+-3. 银行清洁盈余、OCI、资本充足和终期经济可行性无独立自动验证。
+-4. holding 不递归求解复杂所有权/交叉持股，经济 ID 只能防止已登记重复；同一权益用不同 ID 的语义重复仍可能漏检。
+-5. 保险、矿业、REIT、生物科技等专门行业模型未实现，必须报告缺口。融资仅 t0 单轮，不支持复杂可转债、多轮或延迟融资。
+-6. 反向 DCF 只解恒定增长一个维度；不自动唯一识别全部隐含经营条件。
+-7. 尚无真实公司点时数据集、真实供应商适配器、独立模型行为评测或实际 Token 基准。合成案例不能代替这些验证。
+-8. v1 输入破坏性不兼容。须补查真实来源和版本重建 v2，禁止自动填零/默认假设迁移。
+-
+-验证命令：
+-
+-```text
+-python -B -m unittest discover -s <valuation-skill>/scripts -q
+-python -B -m unittest discover -s <intake-skill>/scripts -q
+-python -X utf8 -B <skill-creator>/scripts/quick_validate.py <skill-dir>
+-python -B <valuation-skill>/scripts/valuation_engine.py <valuation-skill>/example/synthetic-handoff.json
+-```
+diff --git a/evidence-driven-valuation/references/known-limitations.md b/evidence-driven-valuation/references/known-limitations.md
+new file mode 100644
+--- /dev/null
++++ b/evidence-driven-valuation/references/known-limitations.md
+@@ -0,0 +1,14 @@
++# 已知限制与版本边界
++
++以当前实现与输入契约核对。历史算例和测试结果不证明真实估值有效。
++
++1. 来源 URL/快照是元数据，不自动下载、验证真实性或判断是否支持原文结论。来源独立性、覆盖分母、业务完整性、假设区间依据仍可被错误声明；必须人工审核。
++2. 乘除单位维度未完整形式化；阶段转换 guards 不证明因果。多期间营运资金、税/折旧、增长再投资一致性仍需审核。
++3. 银行清洁盈余、OCI、资本充足和终期经济可行性无独立自动验证。
++4. holding 不递归求解复杂所有权/交叉持股，经济 ID 只能防止已登记重复；同一权益用不同 ID 的语义重复仍可能漏检。
++5. 保险、矿业、REIT、生物科技等专门行业模型未实现，必须报告缺口。融资仅 t0 单轮，不支持复杂可转债、多轮或延迟融资。
++6. 反向 DCF 只解恒定增长一个维度；不自动唯一识别全部隐含经营条件。
++7. 尚无真实公司点时数据集、真实供应商适配器、独立模型行为评测或实际 Token 基准。合成案例不能代替这些验证。
++8. v1 输入破坏性不兼容。须补查真实来源和版本重建 v2，禁止自动填零/默认假设迁移。
++
++核对历史修复与算例时按需读取 [审计案例](../example/audit-notes.md)。
+diff --git a/financial-analyst/assets/expected_output.json b/financial-analyst/assets/expected_output.json
+deleted file mode 100644
+--- a/financial-analyst/assets/expected_output.json
++++ /dev/null
+@@ -1,161 +0,0 @@
+-{
+-  "_description": "Expected output structure for all 4 scripts. Values are illustrative to show data format.",
+-
+-  "ratio_calculator_output": {
+-    "categories": {
+-      "profitability": {
+-        "roe": {
+-          "value": 0.25,
+-          "formula": "Net Income / Total Equity",
+-          "name": "Return on Equity",
+-          "interpretation": "Good - above average performance"
+-        },
+-        "roa": {
+-          "value": 0.1375,
+-          "formula": "Net Income / Total Assets",
+-          "name": "Return on Assets",
+-          "interpretation": "Excellent - significantly above peers"
+-        },
+-        "gross_margin": {
+-          "value": 0.40,
+-          "formula": "(Revenue - COGS) / Revenue",
+-          "name": "Gross Margin",
+-          "interpretation": "Acceptable - within normal range"
+-        },
+-        "operating_margin": {
+-          "value": 0.16,
+-          "formula": "Operating Income / Revenue",
+-          "name": "Operating Margin",
+-          "interpretation": "Good - above average performance"
+-        },
+-        "net_margin": {
+-          "value": 0.11,
+-          "formula": "Net Income / Revenue",
+-          "name": "Net Margin",
+-          "interpretation": "Good - above average performance"
+-        }
+-      },
+-      "liquidity": {
+-        "current_ratio": {"value": 1.875, "name": "Current Ratio"},
+-        "quick_ratio": {"value": 1.4375, "name": "Quick Ratio"},
+-        "cash_ratio": {"value": 0.625, "name": "Cash Ratio"}
+-      },
+-      "leverage": {
+-        "debt_to_equity": {"value": 0.545, "name": "Debt-to-Equity Ratio"},
+-        "interest_coverage": {"value": 6.67, "name": "Interest Coverage Ratio"},
+-        "dscr": {"value": 2.50, "name": "Debt Service Coverage Ratio"}
+-      },
+-      "efficiency": {
+-        "asset_turnover": {"value": 1.25, "name": "Asset Turnover"},
+-        "inventory_turnover": {"value": 8.57, "name": "Inventory Turnover"},
+-        "receivables_turnover": {"value": 8.33, "name": "Receivables Turnover"},
+-        "dso": {"value": 43.8, "name": "Days Sales Outstanding"}
+-      },
+-      "valuation": {
+-        "pe_ratio": {"value": 81.82, "name": "Price-to-Earnings Ratio"},
+-        "pb_ratio": {"value": 20.45, "name": "Price-to-Book Ratio"},
+-        "ps_ratio": {"value": 9.0, "name": "Price-to-Sales Ratio"},
+-        "ev_ebitda": {"value": 45.7, "name": "EV/EBITDA"},
+-        "peg_ratio": {"value": 6.82, "name": "PEG Ratio"}
+-      }
+-    }
+-  },
+-
+-  "dcf_valuation_output": {
+-    "wacc": 0.085,
+-    "projected_revenue": [55000000, 59950000, 64746000, 69278220, 73434953],
+-    "projected_fcf": [6600000, 7793500, 8416980, 9698951, 10280893],
+-    "terminal_value": {
+-      "perpetuity_growth": 175382225,
+-      "exit_multiple": 176243484
+-    },
+-    "enterprise_value": {
+-      "perpetuity_growth": 149500000,
+-      "exit_multiple": 150100000
+-    },
+-    "equity_value": {
+-      "perpetuity_growth": 142500000,
+-      "exit_multiple": 143100000
+-    },
+-    "value_per_share": {
+-      "perpetuity_growth": 14.25,
+-      "exit_multiple": 14.31
+-    },
+-    "sensitivity_analysis": {
+-      "wacc_values": [0.065, 0.075, 0.085, 0.095, 0.105],
+-      "growth_values": [0.015, 0.020, 0.025, 0.030, 0.035],
+-      "enterprise_value_table": "5x5 nested list of enterprise values",
+-      "share_price_table": "5x5 nested list of share prices"
+-    }
+-  },
+-
+-  "budget_variance_output": {
+-    "executive_summary": {
+-      "period": "Q4 2025",
+-      "company": "Acme Corp",
+-      "total_line_items": 10,
+-      "material_variances_count": 3,
+-      "favorable_count": 4,
+-      "unfavorable_count": 6,
+-      "revenue": {
+-        "actual": 15700000,
+-        "budget": 15500000,
+-        "variance_amount": 200000,
+-        "variance_pct": 1.29
+-      },
+-      "expenses": {
+-        "actual": 13255000,
+-        "budget": 12520000,
+-        "variance_amount": 735000,
+-        "variance_pct": 5.87
+-      },
+-      "net_impact": -535000
+-    },
+-    "material_variances": [
+-      {
+-        "name": "Cost of Goods Sold",
+-        "budget_variance_amount": 600000,
+-        "budget_variance_pct": 8.33,
+-        "favorability": "Unfavorable"
+-      }
+-    ],
+-    "department_summary": {
+-      "Sales": {"total_variance": 0, "variance_pct": 0},
+-      "Operations": {"total_variance": 0, "variance_pct": 0}
+-    },
+-    "category_summary": {
+-      "Revenue": {"total_variance": 0, "variance_pct": 0},
+-      "COGS": {"total_variance": 0, "variance_pct": 0}
+-    }
+-  },
+-
+-  "forecast_builder_output": {
+-    "trend_analysis": {
+-      "trend": {
+-        "slope": 650000,
+-        "intercept": 9500000,
+-        "r_squared": 0.98,
+-        "direction": "upward"
+-      },
+-      "average_growth_rate": 0.06,
+-      "seasonality_index": [0.92, 0.97, 1.01, 1.10]
+-    },
+-    "scenario_comparison": {
+-      "comparison": [
+-        {"scenario": "base", "total_revenue": 185000000, "growth_rate": 0.08},
+-        {"scenario": "bull", "total_revenue": 210000000, "growth_rate": 0.12},
+-        {"scenario": "bear", "total_revenue": 165000000, "growth_rate": 0.05}
+-      ]
+-    },
+-    "rolling_cash_flow": {
+-      "weeks": 13,
+-      "opening_balance": 2500000,
+-      "closing_balance": 2800000,
+-      "total_inflows": 4200000,
+-      "total_outflows": 3900000,
+-      "minimum_balance": 2100000,
+-      "minimum_balance_week": 4,
+-      "cash_runway_weeks": 12
+-    }
+-  }
+-}
+diff --git a/financial-analyst/example/expected_output.json b/financial-analyst/example/expected_output.json
+new file mode 100644
+--- /dev/null
++++ b/financial-analyst/example/expected_output.json
+@@ -0,0 +1,161 @@
++{
++  "_description": "Expected output structure for all 4 scripts. Values are illustrative to show data format.",
++
++  "ratio_calculator_output": {
++    "categories": {
++      "profitability": {
++        "roe": {
++          "value": 0.25,
++          "formula": "Net Income / Total Equity",
++          "name": "Return on Equity",
++          "interpretation": "Good - above average performance"
++        },
++        "roa": {
++          "value": 0.1375,
++          "formula": "Net Income / Total Assets",
++          "name": "Return on Assets",
++          "interpretation": "Excellent - significantly above peers"
++        },
++        "gross_margin": {
++          "value": 0.40,
++          "formula": "(Revenue - COGS) / Revenue",
++          "name": "Gross Margin",
++          "interpretation": "Acceptable - within normal range"
++        },
++        "operating_margin": {
++          "value": 0.16,
++          "formula": "Operating Income / Revenue",
++          "name": "Operating Margin",
++          "interpretation": "Good - above average performance"
++        },
++        "net_margin": {
++          "value": 0.11,
++          "formula": "Net Income / Revenue",
++          "name": "Net Margin",
++          "interpretation": "Good - above average performance"
++        }
++      },
++      "liquidity": {
++        "current_ratio": {"value": 1.875, "name": "Current Ratio"},
++        "quick_ratio": {"value": 1.4375, "name": "Quick Ratio"},
++        "cash_ratio": {"value": 0.625, "name": "Cash Ratio"}
++      },
++      "leverage": {
++        "debt_to_equity": {"value": 0.545, "name": "Debt-to-Equity Ratio"},
++        "interest_coverage": {"value": 6.67, "name": "Interest Coverage Ratio"},
++        "dscr": {"value": 2.50, "name": "Debt Service Coverage Ratio"}
++      },
++      "efficiency": {
++        "asset_turnover": {"value": 1.25, "name": "Asset Turnover"},
++        "inventory_turnover": {"value": 8.57, "name": "Inventory Turnover"},
++        "receivables_turnover": {"value": 8.33, "name": "Receivables Turnover"},
++        "dso": {"value": 43.8, "name": "Days Sales Outstanding"}
++      },
++      "valuation": {
++        "pe_ratio": {"value": 81.82, "name": "Price-to-Earnings Ratio"},
++        "pb_ratio": {"value": 20.45, "name": "Price-to-Book Ratio"},
++        "ps_ratio": {"value": 9.0, "name": "Price-to-Sales Ratio"},
++        "ev_ebitda": {"value": 45.7, "name": "EV/EBITDA"},
++        "peg_ratio": {"value": 6.82, "name": "PEG Ratio"}
++      }
++    }
++  },
++
++  "dcf_valuation_output": {
++    "wacc": 0.085,
++    "projected_revenue": [55000000, 59950000, 64746000, 69278220, 73434953],
++    "projected_fcf": [6600000, 7793500, 8416980, 9698951, 10280893],
++    "terminal_value": {
++      "perpetuity_growth": 175382225,
++      "exit_multiple": 176243484
++    },
++    "enterprise_value": {
++      "perpetuity_growth": 149500000,
++      "exit_multiple": 150100000
++    },
++    "equity_value": {
++      "perpetuity_growth": 142500000,
++      "exit_multiple": 143100000
++    },
++    "value_per_share": {
++      "perpetuity_growth": 14.25,
++      "exit_multiple": 14.31
++    },
++    "sensitivity_analysis": {
++      "wacc_values": [0.065, 0.075, 0.085, 0.095, 0.105],
++      "growth_values": [0.015, 0.020, 0.025, 0.030, 0.035],
++      "enterprise_value_table": "5x5 nested list of enterprise values",
++      "share_price_table": "5x5 nested list of share prices"
++    }
++  },
++
++  "budget_variance_output": {
++    "executive_summary": {
++      "period": "Q4 2025",
++      "company": "Acme Corp",
++      "total_line_items": 10,
++      "material_variances_count": 3,
++      "favorable_count": 4,
++      "unfavorable_count": 6,
++      "revenue": {
++        "actual": 15700000,
++        "budget": 15500000,
++        "variance_amount": 200000,
++        "variance_pct": 1.29
++      },
++      "expenses": {
++        "actual": 13255000,
++        "budget": 12520000,
++        "variance_amount": 735000,
++        "variance_pct": 5.87
++      },
++      "net_impact": -535000
++    },
++    "material_variances": [
++      {
++        "name": "Cost of Goods Sold",
++        "budget_variance_amount": 600000,
++        "budget_variance_pct": 8.33,
++        "favorability": "Unfavorable"
++      }
++    ],
++    "department_summary": {
++      "Sales": {"total_variance": 0, "variance_pct": 0},
++      "Operations": {"total_variance": 0, "variance_pct": 0}
++    },
++    "category_summary": {
++      "Revenue": {"total_variance": 0, "variance_pct": 0},
++      "COGS": {"total_variance": 0, "variance_pct": 0}
++    }
++  },
++
++  "forecast_builder_output": {
++    "trend_analysis": {
++      "trend": {
++        "slope": 650000,
++        "intercept": 9500000,
++        "r_squared": 0.98,
++        "direction": "upward"
++      },
++      "average_growth_rate": 0.06,
++      "seasonality_index": [0.92, 0.97, 1.01, 1.10]
++    },
++    "scenario_comparison": {
++      "comparison": [
++        {"scenario": "base", "total_revenue": 185000000, "growth_rate": 0.08},
++        {"scenario": "bull", "total_revenue": 210000000, "growth_rate": 0.12},
++        {"scenario": "bear", "total_revenue": 165000000, "growth_rate": 0.05}
++      ]
++    },
++    "rolling_cash_flow": {
++      "weeks": 13,
++      "opening_balance": 2500000,
++      "closing_balance": 2800000,
++      "total_inflows": 4200000,
++      "total_outflows": 3900000,
++      "minimum_balance": 2100000,
++      "minimum_balance_week": 4,
++      "cash_runway_weeks": 12
++    }
++  }
++}
+diff --git a/financial-analyst/example/index.json b/financial-analyst/example/index.json
+--- a/financial-analyst/example/index.json
++++ b/financial-analyst/example/index.json
+@@ -13,6 +13,19 @@
+       "limits": "不作为默认事实、默认参数或持续授权；样例进度不代表当前用户",
+       "source": "从原仓库文件迁移，内容中的来源与许可保留；迁移不代表重新核验",
+       "verified_at": "unknown"
++    },
++    {
++      "id": "expected-output",
++      "kind": "synthetic",
++      "files": [
++        "expected_output.json"
++      ],
++      "scenario": "对照财务工具的示意输出结构",
++      "preconditions": "以当前工具输出和输入契约重新验证",
++      "expected": "展示字段结构，示意数字不作为回归金标准",
++      "limits": "不是真实财务数据或实际运行结果",
++      "source": "原 assets/expected_output.json 的 _description 明确为 illustrative 输出",
++      "verified_at": "unknown"
+     }
+   ]
+ }

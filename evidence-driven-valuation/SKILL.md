@@ -17,5 +17,4 @@ description: 将点时可用的微观证据转换为经营变量，执行证据�
 
 交付闸门、经营桥、分业务方法与来源、情景价值及每股单位、特殊价值归属、反向条件、缺口和证伪条件。技术面完全分离。
 
-仍需人工核验原文、独立性、重大业务完整性及区间依据。已知限制见 [audit-notes.md](references/audit-notes.md)。[synthetic-handoff.json](examples/synthetic-handoff.json) 是纯合成可运行样例，不是投资输入或通用参数模板。
-
+仍需人工核验原文、独立性、重大业务完整性及区间依据。已知限制见 [已知限制](references/known-limitations.md)。[synthetic-handoff.json](example/synthetic-handoff.json) 是纯合成可运行样例，不是投资输入或通用参数模板。
